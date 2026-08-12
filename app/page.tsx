@@ -304,7 +304,7 @@ export default function HomePage() {
               Use the search bar below to explore our comprehensive MBBS program and discover the perfect path to kickstart your medical career. Join UAMC and embark on a journey of academic excellence, hands-on clinical training, and cutting-edge medical research!
             </p>
             <div className="mt-10 flex h-[76px] items-center gap-4 border border-[#e0def0] bg-[#efeffb] px-6 text-[15px] text-[#8f8f99] shadow-[0_8px_20px_rgba(16,32,24,0.04)]">
-              <span className="text-[20px] text-[#0d8f4d]">?</span>
+              <span className="text-[20px] text-[#0d8f4d]">⌕</span>
               <span>Find your program like \"Department of Phycology\"</span>
             </div>
             <p className="mt-4 text-[12px] leading-5 text-[#6b6b6b]">
@@ -324,7 +324,7 @@ export default function HomePage() {
                     <p className="mt-4 text-[17px] font-semibold text-[#0f7b45]">Department of Microbiology</p>
                   </div>
                 </div>
-                <div className="grid h-[70px] w-[70px] place-items-center bg-[#129547] text-[36px] leading-none text-white">?</div>
+                <div className="grid h-[70px] w-[70px] place-items-center bg-[#129547] text-[36px] leading-none text-white">→</div>
               </div>
             </div>
           </div>
@@ -337,7 +337,7 @@ export default function HomePage() {
               <Image src="/images/dept2.jpg" alt="Department image 2" fill sizes="374px" className="object-cover object-[center_30%]" />
             </div>
             <div className="absolute left-0 top-[118px] z-10 flex h-[120px] w-[248px] items-center gap-4 bg-[#63be7b] px-5 text-white shadow-[0_12px_30px_rgba(16,32,24,0.12)]">
-              <div className="grid h-12 w-12 place-items-center rounded-full bg-black text-sm font-semibold">??</div>
+              <div className="grid h-12 w-12 place-items-center rounded-full bg-black text-sm font-semibold">🏅</div>
               <div>
                 <p className="text-[40px] font-semibold leading-none">28+</p>
                 <p className="mt-1 text-[12px] leading-5 text-white/88">Department Available For Student</p>
@@ -384,7 +384,7 @@ export default function HomePage() {
               {facilities.map((item) => (
                 <div key={item} className="flex items-center justify-between rounded-sm bg-white px-4 py-3 text-[14px] font-semibold text-[#222] shadow-sm">
                   <span>{item}</span>
-                  <span className="grid h-6 w-6 place-items-center rounded-sm bg-[#f1f7ef] text-[#e0b03a]">?</span>
+                  <span className="grid h-6 w-6 place-items-center rounded-sm bg-[#f1f7ef] text-[#e0b03a]">→</span>
                 </div>
               ))}
             </div>
@@ -407,11 +407,11 @@ export default function HomePage() {
                 Hostel accommodations for female students are available with limited number of seats.
               </p>
               <a href="#" className="mt-6 inline-flex text-[12px] font-semibold text-[#1a87d8]">
-                View Details <span className="ml-2">?</span>
+                View Details <span className="ml-2">→</span>
               </a>
               <button className="mt-8 inline-flex w-fit items-center gap-2 rounded-sm bg-[#1b7e47] px-6 py-3 text-sm font-semibold text-white">
                 View Our Program
-                <span>?</span>
+                <span>→</span>
               </button>
             </div>
           </div>
@@ -609,29 +609,89 @@ export default function HomePage() {
 
       <section className="bg-[#edf5ed] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1180px]">
-          <h3 className="text-center text-3xl font-semibold text-[#1b7e47]">My Students Feedback</h3>
-          <p className="mt-2 text-center text-sm text-[#6f7c70]">We collect feedback to strengthen our student-centered experience.</p>
+          <div className="text-center">
+            <h3 className="font-display text-[clamp(2rem,3vw,3.4rem)] font-semibold text-[#14843f]">My Students Feedback</h3>
+            <p className="mt-2 text-sm text-[#9aa19b]">You'll find something to spark your curiosity and enhance</p>
+          </div>
+
           <div className="mt-8 grid gap-5 lg:grid-cols-3">
-            {["Emma", "Sami", "Sahmila"].map((name) => (
-              <div key={name} className="rounded-sm border border-[#dde6de] bg-white p-6">
-                <p className="text-[#e0b03a]">★★★★★</p>
-                <p className="mt-4 text-sm leading-7 text-[#5d6a5f]">
-                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.
-                </p>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[#1b7e47] to-[#d8b23d]" />
+            <article className="relative bg-white px-6 py-7 shadow-[0_8px_24px_rgba(16,32,24,0.04)]">
+              <p className="text-[#f2c33b]">★★★★</p>
+              <p className="mt-4 max-w-[300px] text-[13px] leading-6 text-[#666]">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+              </p>
+              <div className="mt-6 flex items-end justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="relative h-11 w-11 overflow-hidden rounded-full bg-[#cab7f2] ring-2 ring-white">
+                    <Image
+                      src="/images/feedback-1.jpg"
+                      alt="Emma Elizabeth"
+                      fill
+                      sizes="44px"
+                      className="object-cover object-center"
+                    />
+                  </div>
                   <div>
-                    <p className="font-semibold text-[#1b7e47]">{name}</p>
-                    <p className="text-xs text-[#8b958d]">Student</p>
+                    <p className="text-[14px] font-semibold text-[#14843f]">Emma Elizabeth</p>
+                    <p className="text-[12px] text-[#666]">Assistant Teacher</p>
                   </div>
                 </div>
+                <div className="text-[62px] leading-none text-[#6fbf7f]">❞</div>
               </div>
-            ))}
+            </article>
+
+            <article className="relative bg-white px-6 py-7 shadow-[0_8px_24px_rgba(16,32,24,0.04)]">
+              <p className="text-[#f2c33b]">★★★★★</p>
+              <p className="mt-4 max-w-[300px] text-[13px] leading-6 text-[#666]">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+              </p>
+              <div className="mt-6 flex items-end justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="relative h-11 w-11 overflow-hidden rounded-full bg-[#cab7f2] ring-2 ring-white">
+                    <Image
+                      src="/images/feedback-2.jpg"
+                      alt="Zent Ekizie"
+                      fill
+                      sizes="44px"
+                      className="object-cover object-center"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-semibold text-[#14843f]">Zent Ekizie</p>
+                    <p className="text-[12px] text-[#666]">Assistant Teacher</p>
+                  </div>
+                </div>
+                <div className="text-[62px] leading-none text-[#6fbf7f]">❞</div>
+              </div>
+            </article>
+
+            <article className="relative bg-white px-6 py-7 shadow-[0_8px_24px_rgba(16,32,24,0.04)]">
+              <p className="text-[#f2c33b]">★★★★</p>
+              <p className="mt-4 max-w-[300px] text-[13px] leading-6 text-[#666]">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+              </p>
+              <div className="mt-6 flex items-end justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="relative h-11 w-11 overflow-hidden rounded-full bg-[#cab7f2] ring-2 ring-white">
+                    <Image
+                      src="/images/feedback-3.jpg"
+                      alt="Samantha Willow"
+                      fill
+                      sizes="44px"
+                      className="object-cover object-center"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-semibold text-[#14843f]">Samantha Willow</p>
+                    <p className="text-[12px] text-[#666]">Teacher</p>
+                  </div>
+                </div>
+                <div className="text-[62px] leading-none text-[#6fbf7f]">❞</div>
+              </div>
+            </article>
           </div>
         </div>
-      </section>
-
-      <footer className="bg-[#0b0b0b] text-white">
+      </section>      <footer className="bg-[#0b0b0b] text-white">
         <div className="mx-auto max-w-[1180px] px-4 py-10 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 border-b border-white/10 pb-8 lg:flex-row lg:items-center lg:justify-between">
             <h4 className="text-2xl font-medium">Subscribe To Newsletter</h4>
@@ -679,3 +739,4 @@ export default function HomePage() {
     </main>
   );
 }
+
