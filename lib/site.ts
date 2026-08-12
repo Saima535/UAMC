@@ -1,10 +1,10 @@
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/departments", label: "Departments" },
-  { href: "/doctors", label: "Doctors" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" }
+  { href: "/about", label: "About UAMC" },
+  { href: "/services", label: "Facilities" },
+  { href: "/appointment", label: "Admission" },
+  { href: "/contact", label: "Notice & Media" },
+  { href: "/doctors", label: "Career" }
 ];
 
 export const stats = [
