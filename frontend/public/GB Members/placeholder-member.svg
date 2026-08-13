@@ -1,0 +1,23 @@
+<svg width="800" height="900" viewBox="0 0 800 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7E4DC"/>
+      <stop offset="1" stop-color="#C3CFC3"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="145" y1="135" x2="670" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9D3C7"/>
+      <stop offset="1" stop-color="#B2B4AE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg)"/>
+  <rect x="100" y="90" width="600" height="720" rx="18" fill="url(#panel)" opacity="0.82"/>
+  <circle cx="400" cy="320" r="150" fill="#E3D9C7"/>
+  <path d="M268 620C297 540 343 500 400 500C457 500 504 540 531 620V720H268V620Z" fill="#D9C7A9"/>
+  <path d="M312 286C312 221 356 178 400 178C444 178 488 221 488 286V314C488 362 456 390 400 390C344 390 312 362 312 314V286Z" fill="#F4E5D5"/>
+  <path d="M330 332C352 282 380 255 400 255C416 255 442 277 468 332L500 396H300L330 332Z" fill="#7A4A28" opacity="0.45"/>
+  <circle cx="360" cy="298" r="14" fill="#40392F"/>
+  <circle cx="440" cy="298" r="14" fill="#40392F"/>
+  <path d="M360 360C380 384 420 384 440 360" stroke="#7B4C31" stroke-width="12" stroke-linecap="round"/>
+  <rect x="180" y="770" width="440" height="16" rx="8" fill="#9AA19A" opacity="0.5"/>
+  <text x="400" y="824" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#535B53" font-weight="700">Member Photo</text>
+</svg>

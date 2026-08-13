@@ -12,7 +12,7 @@ const utilityLinks = [
 
 const primaryLinks = [
   { href: "/", label: "HOME", active: true },
-  { href: "/contact", label: "NOTICE & MEDIA" },
+  { href: "/notice-media", label: "NOTICE & MEDIA" },
   { href: "/doctors", label: "CAREER" }
 ];
 
@@ -41,11 +41,10 @@ const facilitiesDropdownItems = [
 ];
 
 const admissionDropdownItems = [
-  { href: "/admission/admission-procedure-and-fees", label: "Admission Procedure and Fees" },
-  { href: "/admission/admission-rules", label: "Admission Rules" },
-  { href: "/admission/admission-paper", label: "Admission Paper" },
-  { href: "/admission/admission-forms", label: "Admission Forms" },
-  { href: "/admission/admission-results", label: "Admission Results" },
+  { href: "/admission", label: "Admission Procedure & Fees" },
+  { href: "/admission/papers", label: "Admission Papers" },
+  { href: "/admission/forms", label: "Admission Forms" },
+  { href: "/admission/results", label: "Admission Results" },
   { href: "/admission/online-registration", label: "Online Registration" }
 ];
 
@@ -135,7 +134,7 @@ function MenuIcon() {
 
 export function LandingPageHeader() {
   return (
-    <header className="sticky top-0 z-40 bg-white">
+    <header className="sticky top-0 z-40 bg-white" suppressHydrationWarning>
       <div className="border-b border-[#e6e6e6]">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-4 text-[#707070] lg:flex-row lg:items-center lg:justify-between lg:px-[88px] lg:py-[18px]">
           <div className="flex flex-col gap-3 text-[13px] font-medium sm:flex-row sm:flex-wrap sm:items-center sm:gap-8">
@@ -209,7 +208,7 @@ export function LandingPageHeader() {
               ))}
               <NavbarDropdownMenu label="ABOUT UAMC" href="/about-uamc/overview" items={aboutDropdownItems} />
               <NavbarDropdownMenu label="FACILITIES" href="/facilities/hospital-service" items={facilitiesDropdownItems} />
-              <NavbarDropdownMenu label="ADMISSION" href="/admission/admission-procedure-and-fees" items={admissionDropdownItems} />
+              <NavbarDropdownMenu label="ADMISSION" href="/admission" items={admissionDropdownItems} active />
               {primaryLinks.slice(1).map((item) => (
                 <Link
                   key={item.label}

@@ -58,13 +58,13 @@ function CalendarIcon() {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white" suppressHydrationWarning>
       <div className="border-t border-white/10" />
 
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-6 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-[120px] lg:py-14">
           <h2 className="text-[clamp(2rem,3vw,3.15rem)] font-medium tracking-tight text-white">Subscribe To Newsletter</h2>
-          <form className="flex w-full max-w-[560px] flex-col gap-3 sm:flex-row" action="#">
+          <form className="flex w-full max-w-[560px] flex-col gap-3 sm:flex-row" action="#" suppressHydrationWarning>
             <input
               type="email"
               placeholder="Enter Your mail"

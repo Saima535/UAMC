@@ -1,0 +1,14 @@
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="85" cy="85" r="78" fill="#EAF6EE" stroke="#1F8F55" stroke-width="3"/>
+  <circle cx="85" cy="85" r="62" fill="#F5FBF6" stroke="#1F8F55" stroke-width="2"/>
+  <circle cx="85" cy="85" r="48" fill="#FFFFFF" stroke="#1F8F55" stroke-width="2"/>
+  <path d="M85 36V134" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M36 85H134" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M47 47L123 123" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M123 47L47 123" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M72 58H98" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M72 112H98" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M58 72V98" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M112 72V98" stroke="#1F8F55" stroke-width="3" stroke-linecap="round"/>
+  <text x="85" y="149" text-anchor="middle" font-size="10" fill="#206D41" font-family="Arial, sans-serif" font-weight="700">UAMC</text>
+</svg>
