@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { LandingPageHeader } from "../components/landing-page-header";
+import { SiteFooter } from "../components/site-footer";
 
 const notices = [
   { day: "12", month: "Mar", title: "FGC's e-Logbook: Modernizing the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" },
@@ -691,51 +692,8 @@ export default function HomePage() {
             </article>
           </div>
         </div>
-      </section>      <footer className="bg-[#0b0b0b] text-white">
-        <div className="mx-auto max-w-[1180px] px-4 py-10 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-6 border-b border-white/10 pb-8 lg:flex-row lg:items-center lg:justify-between">
-            <h4 className="text-2xl font-medium">Subscribe To Newsletter</h4>
-            <div className="flex gap-2">
-              <input className="min-w-[240px] rounded-sm border border-white/15 bg-white px-4 py-3 text-sm text-[#202020] outline-none" placeholder="Enter Your Email" />
-              <button className="rounded-sm bg-white px-5 py-3 text-sm font-semibold text-[#0b0b0b]">Submit Button +</button>
-            </div>
-          </div>
-          <div className="grid gap-8 py-8 md:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <p className="text-lg font-semibold">Uttar Adhunik</p>
-              <p className="mt-4 text-sm leading-7 text-white/65">
-                United Advanced Medical College Hospital is dedicated to quality education and healthcare service.
-              </p>
-            </div>
-            <div>
-              <p className="font-semibold">Our Campus</p>
-              <div className="mt-4 space-y-2 text-sm text-white/65">
-                <p>About</p>
-                <p>Admission</p>
-                <p>Events</p>
-                <p>Academic</p>
-              </div>
-            </div>
-            <div>
-              <p className="font-semibold">Our Pages</p>
-              <div className="mt-4 space-y-2 text-sm text-white/65">
-                <p>News</p>
-                <p>Team</p>
-                <p>Facility</p>
-                <p>Contact</p>
-              </div>
-            </div>
-            <div>
-              <p className="font-semibold">Recent Posts</p>
-              <div className="mt-4 space-y-3 text-sm text-white/65">
-                <p>Those inequities are inequities</p>
-                <p>After Decades of Improvement, Coronavirus</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-6 text-sm text-white/45">© 2026 UAMC. All Rights Reserved.</div>
-        </div>
-      </footer>
+      </section>
+      <SiteFooter />
     </main>
   );
 }

@@ -22,6 +22,16 @@ npm install
 npm run dev
 ```
 
+The dev script automatically clears stale `.next` output before startup to prevent recurring manifest-related `500` errors caused by corrupted development artifacts.
+
+## Reset
+
+If you want to manually clear frontend-generated development artifacts without starting the dev server:
+
+```bash
+npm run reset
+```
+
 ## Documentation
 
 Frontend documentation is kept in the root [docs](D:/Xtra/UAMC/docs) folder for centralized access.

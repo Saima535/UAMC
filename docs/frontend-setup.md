@@ -38,6 +38,16 @@ npm install
 npm run dev
 ```
 
+The `dev` command runs a preparation step before `next dev` that clears stale `.next` output and temporary dev logs. This is intended to prevent recurring missing-manifest errors such as missing `routes-manifest.json`, `pages-manifest.json`, or `app-paths-manifest.json`.
+
+## Manual Reset
+
+If you need to clear generated frontend development artifacts without starting the server:
+
+```bash
+npm run reset
+```
+
 ## Suggested Next Steps
 
 - modularize large landing page sections into dedicated components

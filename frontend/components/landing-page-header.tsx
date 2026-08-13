@@ -28,19 +28,25 @@ const aboutDropdownItems = [
 ];
 
 const facilitiesDropdownItems = [
-  { href: "/services", label: "Academic Facilities" },
-  { href: "/services", label: "Hospital Services" },
-  { href: "/services", label: "Hostel Facilities" },
-  { href: "/services", label: "Laboratory Support" },
-  { href: "/services", label: "Library Resources" }
+  { href: "/facilities/hospital-service", label: "Hospital service" },
+  { href: "/facilities/departments", label: "Departments" },
+  { href: "/facilities/library", label: "Library" },
+  { href: "/facilities/medical-education-unit", label: "Medical Education Unit" },
+  { href: "/facilities/training", label: "Training" },
+  { href: "/facilities/publication", label: "Publication" },
+  { href: "/facilities/seminar", label: "Seminar" },
+  { href: "/facilities/hostel", label: "Hostel" },
+  { href: "/facilities/laboratory", label: "Laboratory" },
+  { href: "/facilities/cafeteria", label: "Cafeteria" }
 ];
 
 const admissionDropdownItems = [
-  { href: "/appointment", label: "Admission Overview" },
-  { href: "/appointment", label: "Eligibility Criteria" },
-  { href: "/appointment", label: "Application Process" },
-  { href: "/appointment", label: "Required Documents" },
-  { href: "/appointment", label: "Fee Structure" }
+  { href: "/admission/admission-procedure-and-fees", label: "Admission Procedure and Fees" },
+  { href: "/admission/admission-rules", label: "Admission Rules" },
+  { href: "/admission/admission-paper", label: "Admission Paper" },
+  { href: "/admission/admission-forms", label: "Admission Forms" },
+  { href: "/admission/admission-results", label: "Admission Results" },
+  { href: "/admission/online-registration", label: "Online Registration" }
 ];
 
 const socialLinks = [
@@ -202,8 +208,8 @@ export function LandingPageHeader() {
                 </Link>
               ))}
               <NavbarDropdownMenu label="ABOUT UAMC" href="/about-uamc/overview" items={aboutDropdownItems} />
-              <NavbarDropdownMenu label="FACILITIES" href="/services" items={facilitiesDropdownItems} />
-              <NavbarDropdownMenu label="ADMISSION" href="/appointment" items={admissionDropdownItems} />
+              <NavbarDropdownMenu label="FACILITIES" href="/facilities/hospital-service" items={facilitiesDropdownItems} />
+              <NavbarDropdownMenu label="ADMISSION" href="/admission/admission-procedure-and-fees" items={admissionDropdownItems} />
               {primaryLinks.slice(1).map((item) => (
                 <Link
                   key={item.label}
