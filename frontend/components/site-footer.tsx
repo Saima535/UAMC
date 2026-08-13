@@ -95,11 +95,11 @@ export function SiteFooter() {
             </p>
 
             <div className="mt-8 space-y-4 text-[15px] text-white/48">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 transition hover:text-[#7d1212]">
                 <LocationIcon />
                 <span>Park, Melbourne, Australia</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 transition hover:text-[#7d1212]">
                 <PhoneIcon />
                 <span>485-826-710</span>
               </div>
@@ -110,7 +110,7 @@ export function SiteFooter() {
             <h3 className="text-[18px] font-medium text-white underline underline-offset-4">Our Campus</h3>
             <div className="mt-10 space-y-5 text-[15px] text-white/48">
               {campusLinks.map((item) => (
-                <Link key={item.label} href={item.href} className="block transition hover:text-white">
+                <Link key={item.label} href={item.href} className="block transition hover:text-[#7d1212]">
                   {item.label}
                 </Link>
               ))}
@@ -121,7 +121,7 @@ export function SiteFooter() {
             <h3 className="text-[18px] font-medium text-white underline underline-offset-4">Our Pages</h3>
             <div className="mt-10 space-y-5 text-[15px] text-white/48">
               {pageLinks.map((item) => (
-                <Link key={item.label} href={item.href} className="block transition hover:text-white">
+                <Link key={item.label} href={item.href} className="block transition hover:text-[#7d1212]">
                   {item.label}
                 </Link>
               ))}
@@ -144,7 +144,9 @@ export function SiteFooter() {
                       <CalendarIcon />
                       <span>{post.date}</span>
                     </div>
-                    <h4 className="mt-4 max-w-[280px] text-[17px] leading-9 text-white">{post.title}</h4>
+                    <h4 className="mt-4 max-w-[280px] text-[17px] leading-9 text-white transition hover:text-[#7d1212]">
+                      {post.title}
+                    </h4>
                   </div>
                 </article>
               ))}
