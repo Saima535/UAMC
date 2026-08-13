@@ -1,0 +1,19 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" fill="#EAF5EC"/>
+  <rect x="44" y="44" width="1112" height="692" fill="#D7EADE" stroke="#9CC7A6" stroke-width="8" stroke-dasharray="18 14"/>
+  <rect x="72" y="108" width="274" height="214" fill="#EEF2F0"/>
+  <rect x="364" y="98" width="770" height="170" fill="#F5F8F6"/>
+  <path d="M104 290C160 248 224 220 298 208" stroke="#F2D256" stroke-width="7"/>
+  <path d="M126 278C194 248 268 230 350 224" stroke="#E46363" stroke-width="7"/>
+  <path d="M150 308 218 252 278 294 336 238" stroke="#9E62D8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="336" cy="238" r="10" fill="#9E62D8"/>
+  <rect x="486" y="326" width="256" height="264" rx="18" fill="#314645"/>
+  <rect x="796" y="406" width="202" height="168" rx="18" fill="#5A6B6B"/>
+  <rect x="92" y="620" width="1016" height="74" fill="#EFF5F0"/>
+  <text x="600" y="654" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#46765A">
+    Seminar left image placeholder
+  </text>
+  <text x="600" y="704" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5F7D68">
+    Replace with your final image in /public/Seminar
+  </text>
+</svg>
