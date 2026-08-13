@@ -1,0 +1,29 @@
+<svg width="1600" height="220" viewBox="0 0 1600 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="220" fill="#F4FBF5"/>
+  <rect y="98" width="1600" height="122" fill="#ECF7EE"/>
+  <g stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 12L120 36L86 92L0 66L32 12Z" fill="#E6A1AA"/>
+    <path d="M170 40C178 16 202 6 228 12L244 104C220 114 196 110 174 92L170 40Z" fill="#F4FBF5"/>
+    <path d="M315 14H405L420 40V110H300V40L315 14Z" fill="#F8FBF7"/>
+    <path d="M482 12L580 42V120H520L482 78V12Z" fill="#FDF8F9"/>
+    <path d="M660 28L760 6L826 46L790 146L684 130L660 28Z" fill="#D36C74"/>
+    <path d="M850 24L958 38L938 160L832 146L850 24Z" fill="#C8D8B7"/>
+    <path d="M1040 18C1088 -4 1136 8 1178 42L1150 108L1058 114L1028 64L1040 18Z" fill="#84D0D8"/>
+    <path d="M1246 16C1280 0 1322 8 1360 40L1340 100L1264 110L1224 64L1246 16Z" fill="#F2D256"/>
+    <path d="M1452 6L1548 20L1598 74L1574 162L1484 150L1438 72L1452 6Z" fill="#E58B90"/>
+  </g>
+  <g stroke="#1A1A1A" stroke-width="6" stroke-linecap="round">
+    <path d="M92 108L118 148"/>
+    <path d="M218 124L246 166"/>
+    <path d="M356 120V164"/>
+    <path d="M544 122L580 162"/>
+    <path d="M728 154L752 190"/>
+    <path d="M884 166L918 198"/>
+    <path d="M1088 120L1130 172"/>
+    <path d="M1292 112L1308 172"/>
+    <path d="M1510 132L1524 190"/>
+  </g>
+  <text x="800" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#51946C">
+    Replace with final decorative hero artwork if needed
+  </text>
+</svg>
