@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SiteHeader } from "../components/site-header";
+import { LandingPageHeader } from "../components/landing-page-header";
 
 const notices = [
   { day: "12", month: "Mar", title: "FGC's e-Logbook: Modernizing the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" },
@@ -87,7 +87,7 @@ function PrincipalIcon() {
 export default function HomePage() {
   return (
     <main className="bg-[#f5f8f3] text-ink">
-      <SiteHeader />
+      <LandingPageHeader />
 
       <section className="relative isolate min-h-[calc(100vh-116px)] overflow-hidden">
         <Image

@@ -1,41 +1,47 @@
-# UAMC Monorepo
+# UAMC Repository
 
-This repository is now organized as a monorepo with clear application boundaries:
+This repository contains two fully isolated applications:
 
-- `frontend/`: the existing Next.js application, moved without changing the contents of its current code files
-- `backend/`: a new modular Express + MongoDB-ready API scaffold
+- `frontend/`: the Next.js frontend
+- `backend/`: the Express + MongoDB backend
+
+Each application manages its own dependencies, lockfile, and runtime commands inside its own folder.
+All documentation is centralized in the root `docs/` folder.
 
 ## Repository Structure
 
 ```text
 .
 ├── backend/
+├── docs/
 ├── frontend/
 ├── .gitignore
-├── package.json
+├── LICENSE
 └── README.md
 ```
 
-## Workspace Commands
+## How To Run
 
-Run commands from the repository root:
+Frontend:
 
 ```bash
-npm run dev:frontend
-npm run build:frontend
-npm run lint:frontend
+cd frontend
+npm install
+npm run dev
+```
 
-npm run dev:backend
-npm run build:backend
-npm run start:backend
-npm run check:backend
+Backend:
+
+```bash
+cd backend
+npm install
+npm run dev
 ```
 
 ## Architecture
 
-- The frontend remains isolated as a presentation application.
-- The backend is isolated as an API application.
-- Each backend feature lives in its own module and is mounted through a central router.
-- Shared backend concerns such as config, database, middleware, and utilities live in dedicated common folders.
+- The frontend and backend are intentionally isolated from each other.
+- There is no root workspace package manager layer.
+- Backend features are organized as modules and mounted through a central API router.
 
 See [docs/architecture.md](docs/architecture.md) for detailed structure and conventions.

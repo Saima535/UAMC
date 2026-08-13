@@ -15,14 +15,14 @@ The existing frontend code files were reorganized by location only. Their conten
 
 ## Run
 
-From the repository root:
+From inside this folder:
 
 ```bash
-npm run dev:frontend
-```
-
-Or from inside this folder:
-
-```bash
+npm install
 npm run dev
 ```
+
+## Documentation
+
+Frontend documentation is kept in the root [docs](D:/Xtra/UAMC/docs) folder for centralized access.
+See [docs/frontend-setup.md](D:/Xtra/UAMC/docs/frontend-setup.md:1) and [docs/architecture.md](D:/Xtra/UAMC/docs/architecture.md:1).

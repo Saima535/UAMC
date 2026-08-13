@@ -1,29 +1,22 @@
-# Monorepo dependencies
-node_modules/
+# Frontend dependencies and build output
 frontend/node_modules/
-backend/node_modules/
-
-# Lockfiles from alternative package managers
-yarn.lock
-pnpm-lock.yaml
-
-# Next.js build output
-.next/
-out/
-.vercel/
 frontend/.next/
 frontend/out/
 frontend/.vercel/
+frontend/.next_stale_*/
 
-# Backend build and coverage output
+# Backend dependencies and build output
+backend/node_modules/
 backend/dist/
 backend/build/
 backend/coverage/
 
-# Generic build artifacts
-dist/
-build/
-coverage/
+# Root stray dependency/install artifacts
+node_modules/
+
+# Alternative package manager lockfiles
+yarn.lock
+pnpm-lock.yaml
 
 # Environment files
 .env

@@ -13,7 +13,6 @@ This folder contains the modular backend scaffold for the UAMC platform.
 
 ```text
 backend/
-├── docs/
 ├── src/
 │   ├── app.ts
 │   ├── server.ts
@@ -38,15 +37,10 @@ This keeps features isolated while allowing a single mother router to mount all 
 
 ## Run
 
-From the repository root:
+From inside this folder:
 
 ```bash
-npm run dev:backend
-```
-
-Or from inside this folder:
-
-```bash
+npm install
 npm run dev
 ```
 
@@ -57,3 +51,8 @@ Copy `.env.example` to `.env` and set:
 - `PORT`
 - `CLIENT_ORIGIN`
 - `MONGODB_URI`
+
+## Documentation
+
+Backend documentation is kept in the root [docs](D:/Xtra/UAMC/docs) folder for centralized access.
+See [docs/backend-setup.md](D:/Xtra/UAMC/docs/backend-setup.md:1) and [docs/architecture.md](D:/Xtra/UAMC/docs/architecture.md:1).
