@@ -1,32 +1,46 @@
-# Frontend dependencies and build output
+# Dependencies
+node_modules/
 frontend/node_modules/
+backend/node_modules/
+
+# Frontend generated output
 frontend/.next/
+frontend/.next-development/
+frontend/.next-production/
 frontend/out/
 frontend/.vercel/
 frontend/.next_stale_*/
+frontend/dev-start.out
+frontend/dev-start.err
+frontend/dev-smoke.log
+frontend/.frontend-dev.lock
 
-# Backend dependencies and build output
-backend/node_modules/
+# Backend generated output
 backend/dist/
 backend/build/
 backend/coverage/
 
-# Root stray dependency/install artifacts
-node_modules/
-
-# Alternative package manager lockfiles
-yarn.lock
-pnpm-lock.yaml
+# Test coverage and caches
+coverage/
+.cache/
+.eslintcache
+*.tsbuildinfo
 
 # Environment files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 .env.*
+frontend/.env
+frontend/.env.*
+backend/.env
+backend/.env.*
 !.env.example
+!frontend/.env.example
+!backend/.env.example
 !.env*.example
+
+# Package manager files
+yarn.lock
+pnpm-lock.yaml
 
 # Logs
 logs/
@@ -45,7 +59,7 @@ temp/
 *.swo
 *~
 
-# OS and editor noise
+# OS and editor files
 .DS_Store
 Thumbs.db
 .vscode/

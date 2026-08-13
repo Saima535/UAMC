@@ -1,6 +1,13 @@
-import path from "node:path";
 import { spawn } from "node:child_process";
-import { cleanFrontendArtifacts, readActiveLock, removeLock, rootDir, writeLock } from "./dev-helpers.mjs";
+import {
+  cleanFrontendArtifacts,
+  createNextEnv,
+  getNextBinPath,
+  readActiveLock,
+  removeLock,
+  rootDir,
+  writeLock
+} from "./dev-helpers.mjs";
 
 async function main() {
   const activeLock = await readActiveLock();
@@ -21,10 +28,9 @@ async function main() {
 
   await writeLock();
 
-  const nextBinPath = path.join(rootDir, "node_modules", "next", "dist", "bin", "next");
-  const child = spawn(process.execPath, [nextBinPath, "dev"], {
+  const child = spawn(process.execPath, [getNextBinPath(), "dev"], {
     cwd: rootDir,
-    env: process.env,
+    env: createNextEnv("development"),
     stdio: "inherit"
   });
 

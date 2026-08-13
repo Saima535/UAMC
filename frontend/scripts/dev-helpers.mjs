@@ -3,7 +3,13 @@ import path from "node:path";
 
 export const rootDir = process.cwd();
 export const lockFilePath = path.join(rootDir, ".frontend-dev.lock");
-const cleanupTargets = [".next", "dev-smoke.log"];
+export const nextRuntimeEnvVar = "UAMC_NEXT_RUNTIME";
+export const distDirs = {
+  development: ".next-development",
+  production: ".next-production",
+  legacy: ".next"
+};
+const cleanupTargets = [distDirs.legacy, distDirs.development, distDirs.production, "dev-smoke.log"];
 
 export async function fileExists(targetPath) {
   try {
@@ -72,4 +78,15 @@ export async function cleanFrontendArtifacts() {
       throw new Error(`Could not remove ${path.basename(targetPath)}: ${message}`);
     }
   }
+}
+
+export function createNextEnv(mode) {
+  return {
+    ...process.env,
+    [nextRuntimeEnvVar]: mode
+  };
+}
+
+export function getNextBinPath() {
+  return path.join(rootDir, "node_modules", "next", "dist", "bin", "next");
 }
