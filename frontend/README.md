@@ -22,7 +22,11 @@ npm install
 npm run dev
 ```
 
-The dev script automatically clears stale `.next` output before startup to prevent recurring manifest-related `500` errors caused by corrupted development artifacts.
+The dev script now does two things before starting Next:
+- prevents multiple frontend dev servers from running against the same `frontend/.next` directory
+- clears stale `.next` output only when no active dev server is using it
+
+This is the permanent safeguard against recurring manifest-related `500` errors caused by deleting or corrupting `.next` while another dev process is still running.
 
 ## Reset
 
@@ -31,6 +35,8 @@ If you want to manually clear frontend-generated development artifacts without s
 ```bash
 npm run reset
 ```
+
+If a frontend dev server is already running, `reset` will refuse to run until that process is stopped.
 
 ## Documentation
 

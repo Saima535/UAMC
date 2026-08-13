@@ -38,7 +38,13 @@ npm install
 npm run dev
 ```
 
-The `dev` command runs a preparation step before `next dev` that clears stale `.next` output and temporary dev logs. This is intended to prevent recurring missing-manifest errors such as missing `routes-manifest.json`, `pages-manifest.json`, or `app-paths-manifest.json`.
+The `dev` command uses a guarded launcher instead of calling `next dev` directly. That launcher:
+
+- prevents multiple frontend dev servers from running at the same time
+- clears stale `.next` output only when no active dev process is using it
+- stops startup early if another frontend dev server is already running
+
+This is intended to prevent recurring missing-manifest errors such as missing `routes-manifest.json`, `pages-manifest.json`, `app-paths-manifest.json`, or missing webpack cache files caused by `.next` being modified while a live dev server is still using it.
 
 ## Manual Reset
 
@@ -47,6 +53,8 @@ If you need to clear generated frontend development artifacts without starting t
 ```bash
 npm run reset
 ```
+
+If the dev server is running, reset will fail fast and ask you to stop that process first.
 
 ## Suggested Next Steps
 

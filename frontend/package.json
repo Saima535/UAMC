@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/prepare-dev.mjs",
-    "dev": "next dev",
+    "dev": "node scripts/dev-server.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "reset": "node scripts/prepare-dev.mjs"
+    "reset": "node scripts/reset-frontend.mjs"
   },
   "dependencies": {
     "next": "15.5.23",
