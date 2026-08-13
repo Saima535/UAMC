@@ -1,0 +1,22 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" fill="#EEF6EF"/>
+  <rect x="44" y="44" width="1112" height="692" fill="#DAEBDE" stroke="#9CC7A6" stroke-width="8" stroke-dasharray="18 14"/>
+  <rect x="90" y="116" width="72" height="514" fill="#C5A271"/>
+  <rect x="196" y="190" width="844" height="362" fill="#F7F7F2"/>
+  <rect x="330" y="406" width="312" height="126" rx="14" fill="#B88457"/>
+  <rect x="710" y="334" width="228" height="126" rx="14" fill="#B88457"/>
+  <circle cx="176" cy="516" r="28" fill="#D63D2F"/>
+  <circle cx="256" cy="516" r="28" fill="#D63D2F"/>
+  <circle cx="176" cy="592" r="28" fill="#D63D2F"/>
+  <circle cx="256" cy="592" r="28" fill="#D63D2F"/>
+  <circle cx="500" cy="468" r="16" fill="#FFE676"/>
+  <circle cx="816" cy="390" r="16" fill="#FFE676"/>
+  <path d="M118 82H1100" stroke="#FFFFFF" stroke-width="12"/>
+  <path d="M250 140C280 104 326 88 382 88H1012C1040 88 1062 110 1062 138V160" stroke="#DDE8DE" stroke-width="22"/>
+  <text x="600" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#46765A">
+    Cafeteria right image placeholder
+  </text>
+  <text x="600" y="714" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#5F7D68">
+    Replace with your final image in /public/Cafeteria
+  </text>
+</svg>
