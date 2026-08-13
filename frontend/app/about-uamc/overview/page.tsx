@@ -14,6 +14,30 @@ const aboutLinks = [
   { href: "/about-uamc/gb-members", label: "GB Members" }
 ];
 
+function OverviewImagePlaceholder({
+  label,
+  filename,
+  className
+}: {
+  label: string;
+  filename: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`relative overflow-hidden bg-[linear-gradient(135deg,#d9ece0_0%,#eef7f0_55%,#d0e4d6_100%)] ${className ?? ""}`}
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(18,149,71,0.16),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.55),rgba(255,255,255,0.08))]" />
+      <div className="absolute inset-0 border border-[#c9ddd0]" />
+      <div className="relative flex h-full w-full flex-col items-center justify-center px-6 text-center">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#129547]">Overview Image Slot</p>
+        <p className="mt-3 text-[18px] font-semibold text-[#395040]">{label}</p>
+        <p className="mt-2 text-[12px] text-[#6b7f70]">Add file to `/public/Overview/{filename}`</p>
+      </div>
+    </div>
+  );
+}
+
 function KnowledgeIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
@@ -123,17 +147,15 @@ export default function AboutUamcOverviewPage() {
 
         <section className="mx-auto grid max-w-[1440px] gap-14 px-6 py-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
           <div className="grid gap-4 sm:grid-cols-[0.8fr_1fr]">
-            <div className="relative h-[420px] overflow-hidden bg-[#e1ebe2]">
-              <Image src="/images/uamc1.jpg" alt="UAMC campus" fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover" />
+            <div className="relative h-[420px] overflow-hidden">
+              <OverviewImagePlaceholder label="About Left Image" filename="about-left.jpg" className="h-full" />
               <div className="absolute left-1/2 top-1/2 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 p-3 shadow-[0_14px_32px_rgba(16,32,24,0.2)]">
                 <div className="relative h-full w-full">
                   <Image src="/images/logo2.jpg" alt="UAMC seal" fill sizes="150px" className="rounded-full object-cover" />
                 </div>
               </div>
             </div>
-            <div className="relative h-[420px] overflow-hidden bg-[#d7e5d8]">
-              <Image src="/images/umac2.jpg" alt="UAMC building" fill sizes="(max-width: 1024px) 100vw, 500px" className="object-cover" />
-            </div>
+            <OverviewImagePlaceholder label="About Right Image" filename="about-right.jpg" className="h-[420px]" />
           </div>
 
           <div className="max-w-[640px]">
@@ -207,18 +229,12 @@ export default function AboutUamcOverviewPage() {
 
           <div className="relative grid gap-3 sm:grid-cols-[0.75fr_1.25fr]">
             <div className="grid gap-3">
-              <div className="relative h-[150px] overflow-hidden bg-[#dceadf]">
-                <Image src="/images/dept1.jpg" alt="Medical training" fill sizes="260px" className="object-cover" />
-              </div>
-              <div className="relative h-[150px] overflow-hidden bg-[#dceadf]">
-                <Image src="/images/dept2.jpg" alt="Campus service" fill sizes="260px" className="object-cover" />
-              </div>
+              <OverviewImagePlaceholder label="Visiting Top Image" filename="visiting-top.jpg" className="h-[150px]" />
+              <OverviewImagePlaceholder label="Visiting Bottom Image" filename="visiting-bottom.jpg" className="h-[150px]" />
             </div>
-            <div className="relative h-[313px] overflow-hidden bg-[#dceadf]">
-              <Image src="/images/hero.jpg" alt="Students and staff" fill sizes="520px" className="object-cover" />
-            </div>
+            <OverviewImagePlaceholder label="Visiting Main Image" filename="visiting-main.jpg" className="h-[313px]" />
             <div className="absolute bottom-3 left-[18%] z-10 flex items-center gap-4 bg-[#7bc793] px-5 py-3 text-white shadow-[0_10px_20px_rgba(0,0,0,0.12)]">
-              <div className="grid h-10 w-10 place-items-center rounded-full bg-[#24352b] text-sm font-semibold">👤</div>
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-[#24352b] text-sm font-semibold">28+</div>
               <div>
                 <p className="text-[34px] font-semibold leading-none">28+</p>
                 <p className="text-[11px] leading-4 text-white/92">Department Available For Student</p>
@@ -229,22 +245,32 @@ export default function AboutUamcOverviewPage() {
 
         <section className="mx-auto max-w-[1440px] px-6 py-8 lg:px-10">
           <div className="relative overflow-hidden">
-            <div className="absolute inset-0">
-              <Image src="/images/alumni.jpg" alt="Background banner" fill sizes="100vw" className="object-cover" />
-            </div>
+            <OverviewImagePlaceholder label="Statistics Background" filename="stats-bg.jpg" className="absolute inset-0" />
             <div className="absolute inset-0 bg-[#0f7c3f]/78" />
             <div className="relative grid gap-8 px-8 py-10 text-center text-white sm:grid-cols-3">
               <div>
                 <p className="font-display text-[3.1rem] leading-none">90%</p>
-                <p className="mt-2 text-[13px] font-semibold leading-5 text-[#ffd43f]">Post-Graduation<br />Success Rate</p>
+                <p className="mt-2 text-[13px] font-semibold leading-5 text-[#ffd43f]">
+                  Post-Graduation
+                  <br />
+                  Success Rate
+                </p>
               </div>
               <div>
                 <p className="font-display text-[3.1rem] leading-none">Top 10</p>
-                <p className="mt-2 text-[13px] font-semibold leading-5 text-[#ffd43f]">Colleges That<br />Create Futures</p>
+                <p className="mt-2 text-[13px] font-semibold leading-5 text-[#ffd43f]">
+                  Colleges That
+                  <br />
+                  Create Futures
+                </p>
               </div>
               <div>
                 <p className="font-display text-[3.1rem] leading-none">No. 1</p>
-                <p className="mt-2 text-[13px] font-semibold leading-5 text-[#ffd43f]">In The Nation For<br />Materials R&amp;D</p>
+                <p className="mt-2 text-[13px] font-semibold leading-5 text-[#ffd43f]">
+                  In The Nation For
+                  <br />
+                  Materials R&amp;D
+                </p>
               </div>
             </div>
           </div>
@@ -252,16 +278,10 @@ export default function AboutUamcOverviewPage() {
 
         <section className="mx-auto grid max-w-[1440px] gap-12 px-6 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div className="grid gap-3 sm:grid-cols-[0.85fr_1fr]">
-            <div className="relative h-[300px] overflow-hidden bg-[#dce9de]">
-              <Image src="/images/uamc1.jpg" alt="Campus image" fill sizes="360px" className="object-cover" />
-            </div>
+            <OverviewImagePlaceholder label="Admission Left Image" filename="admission-left.jpg" className="h-[300px]" />
             <div className="grid gap-3">
-              <div className="relative h-[144px] overflow-hidden bg-[#dce9de]">
-                <Image src="/images/umac2.jpg" alt="Hospital image" fill sizes="420px" className="object-cover" />
-              </div>
-              <div className="relative h-[144px] overflow-hidden bg-[#dce9de]">
-                <Image src="/images/camp3.jpg" alt="Campus block" fill sizes="420px" className="object-cover" />
-              </div>
+              <OverviewImagePlaceholder label="Admission Top Right" filename="admission-top-right.jpg" className="h-[144px]" />
+              <OverviewImagePlaceholder label="Admission Bottom Right" filename="admission-bottom-right.jpg" className="h-[144px]" />
             </div>
           </div>
 
@@ -306,12 +326,8 @@ export default function AboutUamcOverviewPage() {
           <div className="relative flex items-center justify-center">
             <div className="absolute right-0 top-[18px] h-[230px] w-[320px] bg-[#cfe4f4]" />
             <div className="relative z-10 flex items-end gap-6">
-              <div className="relative h-[320px] w-[220px] overflow-hidden bg-[#dfe9df] shadow-[0_18px_32px_rgba(16,32,24,0.14)]">
-                <Image src="/images/feedback-1.jpg" alt="Student portrait" fill sizes="220px" className="object-cover" />
-              </div>
-              <div className="relative h-[260px] w-[180px] overflow-hidden bg-[#d8e7f4] shadow-[0_18px_32px_rgba(16,32,24,0.14)]">
-                <Image src="/images/camp1.jpg" alt="Campus scene" fill sizes="180px" className="object-cover" />
-              </div>
+              <OverviewImagePlaceholder label="Sustainability Main Image" filename="sustainability-main.jpg" className="h-[320px] w-[220px] shadow-[0_18px_32px_rgba(16,32,24,0.14)]" />
+              <OverviewImagePlaceholder label="Sustainability Side Image" filename="sustainability-side.jpg" className="h-[260px] w-[180px] shadow-[0_18px_32px_rgba(16,32,24,0.14)]" />
             </div>
           </div>
         </section>
@@ -349,17 +365,13 @@ export default function AboutUamcOverviewPage() {
                 </button>
               </div>
 
-              <div className="relative h-[420px] overflow-hidden bg-[#dbe7db]">
-                <Image src="/images/principal.jpg" alt="Principal portrait" fill sizes="700px" className="object-cover" />
-              </div>
+              <OverviewImagePlaceholder label="Principal Image" filename="principal.jpg" className="h-[420px]" />
             </div>
           </div>
         </section>
 
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <Image src="/images/d.jpg" alt="Admission background" fill sizes="100vw" className="object-cover" />
-          </div>
+          <OverviewImagePlaceholder label="Admission Banner Background" filename="admission-banner.jpg" className="absolute inset-0" />
           <div className="absolute inset-0 bg-[#0f6a34]/80" />
           <div className="relative mx-auto max-w-[1440px] px-6 py-20 lg:px-10">
             <div className="mx-auto max-w-[1200px] bg-[rgba(8,68,33,0.46)] px-8 py-10 text-center text-white backdrop-blur-[1px]">
@@ -385,10 +397,10 @@ export default function AboutUamcOverviewPage() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {[
-              { name: "Emma Elizabeth", role: "Assistant Teacher", image: "/images/feedback-1.jpg" },
-              { name: "Zent Ekizie", role: "Assistant Teacher", image: "/images/feedback-2.jpg" },
-              { name: "Samantha Willow", role: "Teacher", image: "/images/feedback-3.jpg" }
-            ].map((item) => (
+              { name: "Emma Elizabeth", role: "Assistant Teacher", filename: "feedback-1.jpg" },
+              { name: "Zent Ekizie", role: "Assistant Teacher", filename: "feedback-2.jpg" },
+              { name: "Samantha Willow", role: "Teacher", filename: "feedback-3.jpg" }
+            ].map((item, index) => (
               <article key={item.name} className="border border-[#efefef] bg-white px-7 py-7 shadow-[0_12px_28px_rgba(16,32,24,0.05)]">
                 <p className="text-[#f2c33b]">★★★★★</p>
                 <p className="mt-4 text-[13px] leading-7 text-[#777]">
@@ -396,9 +408,11 @@ export default function AboutUamcOverviewPage() {
                 </p>
                 <div className="mt-6 flex items-end justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="relative h-10 w-10 overflow-hidden rounded-full bg-[#dce8dc]">
-                      <Image src={item.image} alt={item.name} fill sizes="40px" className="object-cover" />
-                    </div>
+                    <OverviewImagePlaceholder
+                      label={`Feedback ${index + 1}`}
+                      filename={item.filename}
+                      className="h-10 w-10 rounded-full"
+                    />
                     <div>
                       <p className="text-[14px] font-semibold text-[#129547]">{item.name}</p>
                       <p className="text-[12px] text-[#666]">{item.role}</p>
