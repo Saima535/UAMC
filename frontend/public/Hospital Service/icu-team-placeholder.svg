@@ -1,0 +1,20 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#EAF5EC"/>
+  <rect x="40" y="40" width="1120" height="820" fill="#D8EADE" stroke="#9CC7A6" stroke-width="8" stroke-dasharray="18 14"/>
+  <rect x="220" y="120" width="220" height="500" rx="20" fill="#F7FBF8"/>
+  <circle cx="330" cy="220" r="52" fill="#D5C5B4"/>
+  <rect x="282" y="282" width="96" height="250" rx="28" fill="#DDEAF7"/>
+  <rect x="520" y="110" width="230" height="520" rx="20" fill="#F7FBF8"/>
+  <circle cx="634" cy="206" r="52" fill="#D5C5B4"/>
+  <rect x="586" y="268" width="96" height="260" rx="28" fill="#DDEAF7"/>
+  <rect x="812" y="130" width="240" height="510" rx="20" fill="#F7FBF8"/>
+  <circle cx="930" cy="220" r="52" fill="#D5C5B4"/>
+  <rect x="882" y="282" width="96" height="250" rx="28" fill="#DDEAF7"/>
+  <rect x="110" y="728" width="980" height="64" fill="#EFF5F0"/>
+  <text x="600" y="764" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#46765A">
+    ICU feature image placeholder
+  </text>
+  <text x="600" y="814" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5F7D68">
+    Replace with your final image in /public/Hospital Service
+  </text>
+</svg>
