@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { NavbarDropdownMenu } from "./navbar-dropdown-menu";
 
 const utilityLinks = [
   { href: "/", label: "Student Portal" },
@@ -11,11 +12,35 @@ const utilityLinks = [
 
 const primaryLinks = [
   { href: "/", label: "HOME", active: true },
-  { href: "/about", label: "ABOUT UAMC", hasChevron: true },
-  { href: "/services", label: "FACILITIES", hasChevron: true },
-  { href: "/appointment", label: "ADMISSION", hasChevron: true },
   { href: "/contact", label: "NOTICE & MEDIA" },
   { href: "/doctors", label: "CAREER" }
+];
+
+const aboutDropdownItems = [
+  { href: "/about-uamc/overview", label: "Overview" },
+  { href: "/about-uamc/history", label: "History of UAMC" },
+  { href: "/about-uamc/vision-mission", label: "Vision & Mission" },
+  { href: "/about-uamc/aim-objective", label: "Aim & Objective" },
+  { href: "/about-uamc/organizational-structure", label: "Organizational Structure" },
+  { href: "/about-uamc/founder-members", label: "Founder Members" },
+  { href: "/about-uamc/ec-members", label: "EC Members" },
+  { href: "/about-uamc/gb-members", label: "GB Members" }
+];
+
+const facilitiesDropdownItems = [
+  { href: "/services", label: "Academic Facilities" },
+  { href: "/services", label: "Hospital Services" },
+  { href: "/services", label: "Hostel Facilities" },
+  { href: "/services", label: "Laboratory Support" },
+  { href: "/services", label: "Library Resources" }
+];
+
+const admissionDropdownItems = [
+  { href: "/appointment", label: "Admission Overview" },
+  { href: "/appointment", label: "Eligibility Criteria" },
+  { href: "/appointment", label: "Application Process" },
+  { href: "/appointment", label: "Required Documents" },
+  { href: "/appointment", label: "Fee Structure" }
 ];
 
 const socialLinks = [
@@ -79,14 +104,6 @@ function PhoneIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-[18px] w-[18px]" aria-hidden="true">
       <path d="M21 16.2v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.12 3.5 2 2 0 0 1 3.1 1.3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.57 1.76L6.7 9.1a16 16 0 0 0 8.2 8.2l1.34-1.33a2 2 0 0 1 1.76-.57l3 .5A2 2 0 0 1 21 16.2Z" />
-    </svg>
-  );
-}
-
-function ChevronIcon() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.9" className="h-[12px] w-[12px]" aria-hidden="true">
-      <path d="m5 7.5 5 5 5-5" />
     </svg>
   );
 }
@@ -173,7 +190,7 @@ export function LandingPageHeader() {
 
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
             <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-[15px] font-medium tracking-[0.01em] text-[#111111] lg:flex-nowrap lg:gap-8">
-              {primaryLinks.map((item) => (
+              {primaryLinks.slice(0, 1).map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
@@ -182,7 +199,20 @@ export function LandingPageHeader() {
                   }`}
                 >
                   <span>{item.label}</span>
-                  {item.hasChevron ? <ChevronIcon /> : null}
+                </Link>
+              ))}
+              <NavbarDropdownMenu label="ABOUT UAMC" href="/about-uamc/overview" items={aboutDropdownItems} />
+              <NavbarDropdownMenu label="FACILITIES" href="/services" items={facilitiesDropdownItems} />
+              <NavbarDropdownMenu label="ADMISSION" href="/appointment" items={admissionDropdownItems} />
+              {primaryLinks.slice(1).map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`inline-flex items-center gap-2 pb-[10px] transition hover:text-[#14843f] ${
+                    item.active ? "border-b-2 border-[#14843f] text-[#14843f]" : "border-b-2 border-transparent"
+                  }`}
+                >
+                  <span>{item.label}</span>
                 </Link>
               ))}
             </nav>
