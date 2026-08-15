@@ -142,7 +142,7 @@ export default function AboutUamcOverviewPage() {
               <OverviewImagePlaceholder label="About Left Image" className="h-full" />
               <div className="absolute left-1/2 top-1/2 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 p-3 shadow-[0_14px_32px_rgba(16,32,24,0.2)]">
                 <div className="relative h-full w-full">
-                  <Image src="/images/logo2.jpg" alt="UAMC seal" fill sizes="150px" className="rounded-full object-cover" />
+                  <Image src="/images/logo.png" alt="UAMC seal" fill sizes="150px" className="object-contain" />
                 </div>
               </div>
             </div>

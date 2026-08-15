@@ -63,10 +63,7 @@ export default function AboutUamcOrganizationalStructurePage() {
                 </div>
 
                 <div className="relative hidden h-[136px] w-[136px] shrink-0 lg:block">
-                  <PlaceholderImage
-                    label="UAMC Seal"
-                    className="h-full w-full rounded-full border-0"
-                  />
+                  <Image src="/images/logo.png" alt="UAMC seal" fill sizes="136px" className="object-contain" />
                 </div>
               </div>
             </div>
@@ -136,7 +133,7 @@ export default function AboutUamcOrganizationalStructurePage() {
             <div className="max-w-[360px]">
               <div className="flex items-center gap-4">
                 <div className="relative h-[58px] w-[58px] shrink-0">
-                  <PlaceholderImage label="Logo" className="h-full w-full border-0" />
+                  <Image src="/images/logo.png" alt="UAMC logo" fill sizes="58px" className="object-contain" />
                 </div>
                 <div>
                   <p className="font-display text-[2rem] leading-none text-white">Uttara Adhunik</p>
