@@ -35,6 +35,7 @@ type FetchContentItemsOptions = {
   category?: string;
   includeUnpublished?: boolean;
   allowFallback?: boolean;
+  token?: string;
 };
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:5000/api/v1";
@@ -169,11 +170,12 @@ function getFallbackItems(type: ContentType) {
   return type === "notice" ? fallbackNotices : fallbackPublications;
 }
 
-async function apiRequest<T>(path: string, init?: RequestInit): Promise<T> {
+async function apiRequest<T>(path: string, init?: RequestInit, token?: string): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...init,
     headers: {
       "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(init?.headers ?? {})
     },
     cache: "no-store"
@@ -193,7 +195,7 @@ async function apiRequest<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export async function fetchContentItems(options: FetchContentItemsOptions) {
-  const { type, limit = 20, category, includeUnpublished = false, allowFallback = true } = options;
+  const { type, limit = 20, category, includeUnpublished = false, allowFallback = true, token } = options;
   const searchParams = new URLSearchParams({
     type,
     limit: String(limit)
@@ -208,7 +210,7 @@ export async function fetchContentItems(options: FetchContentItemsOptions) {
   }
 
   try {
-    return await apiRequest<ContentItem[]>(`/content-items?${searchParams.toString()}`);
+    return await apiRequest<ContentItem[]>(`/content-items?${searchParams.toString()}`, undefined, token);
   } catch (error) {
     if (!allowFallback) {
       throw error;
@@ -220,14 +222,14 @@ export async function fetchContentItems(options: FetchContentItemsOptions) {
   }
 }
 
-export async function fetchContentStats(allowFallback = true) {
+export async function fetchContentStats(allowFallback = true, token?: string) {
   try {
     return await apiRequest<{
       notices: number;
       publications: number;
       published: number;
       drafts: number;
-    }>("/content-items/stats");
+    }>("/content-items/stats", undefined, token);
   } catch (error) {
     if (!allowFallback) {
       throw error;
@@ -242,24 +244,24 @@ export async function fetchContentStats(allowFallback = true) {
   }
 }
 
-export async function createContentItem(payload: ContentItemPayload) {
+export async function createContentItem(payload: ContentItemPayload, token: string) {
   return apiRequest<ContentItem>("/content-items", {
     method: "POST",
     body: JSON.stringify(payload)
-  });
+  }, token);
 }
 
-export async function updateContentItem(id: string, payload: Partial<ContentItemPayload>) {
+export async function updateContentItem(id: string, payload: Partial<ContentItemPayload>, token: string) {
   return apiRequest<ContentItem>(`/content-items/${id}`, {
     method: "PATCH",
     body: JSON.stringify(payload)
-  });
+  }, token);
 }
 
-export async function deleteContentItem(id: string) {
+export async function deleteContentItem(id: string, token: string) {
   return apiRequest<{ id: string }>(`/content-items/${id}`, {
     method: "DELETE"
-  });
+  }, token);
 }
 
 export function formatDayMonth(dateString: string) {
@@ -278,4 +280,3 @@ export function formatLongDate(dateString: string) {
     year: "numeric"
   }).format(new Date(dateString));
 }
-

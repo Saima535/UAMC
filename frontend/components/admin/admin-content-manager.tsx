@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getStoredAdminToken } from "../../lib/admin-auth";
 import {
   createContentItem,
   deleteContentItem,
@@ -70,7 +71,8 @@ export function AdminContentManager({ type, title, description }: AdminContentMa
         type,
         limit: 100,
         includeUnpublished: true,
-        allowFallback: false
+        allowFallback: false,
+        token: getStoredAdminToken()
       });
       setItems(nextItems);
     } catch (fetchError) {
@@ -126,10 +128,10 @@ export function AdminContentManager({ type, title, description }: AdminContentMa
 
     try {
       if (editingId) {
-        await updateContentItem(editingId, payload);
+        await updateContentItem(editingId, payload, getStoredAdminToken());
         setSuccessMessage(`${title} item updated successfully.`);
       } else {
-        await createContentItem(payload);
+        await createContentItem(payload, getStoredAdminToken());
         setSuccessMessage(`${title} item created successfully.`);
       }
 
@@ -153,7 +155,7 @@ export function AdminContentManager({ type, title, description }: AdminContentMa
     setSuccessMessage("");
 
     try {
-      await deleteContentItem(id);
+      await deleteContentItem(id, getStoredAdminToken());
       if (editingId === id) {
         resetForm();
       }

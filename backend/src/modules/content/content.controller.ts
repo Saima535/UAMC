@@ -1,4 +1,5 @@
 import type { Request, Response } from "express";
+import { extractBearerToken, verifyAdminSessionToken } from "../../common/auth/admin-auth.js";
 import {
   createContentItem,
   deleteContentItem,
@@ -18,7 +19,12 @@ function getSingleParam(value: string | string[] | undefined) {
 }
 
 export async function listContentItemsHandler(request: Request, response: Response) {
-  const items = await listContentItems(request.query);
+  const token = extractBearerToken(request);
+  const isAdminRequest = token ? Boolean(verifyAdminSessionToken(token)) : false;
+  const items = await listContentItems({
+    ...request.query,
+    includeUnpublished: isAdminRequest && request.query.includeUnpublished === "true"
+  });
 
   response.status(200).json({
     success: true,

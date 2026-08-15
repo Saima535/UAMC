@@ -9,14 +9,18 @@ const envSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   PORT: z.coerce.number().int().positive().default(5000),
   CLIENT_ORIGIN: z.string().min(1).default("http://localhost:3000"),
-  MONGODB_URI: z.string().min(1, "MONGODB_URI is required")
+  MONGODB_URI: z.string().min(1, "MONGODB_URI is required"),
+  AdminEmail: z.string().email("AdminEmail must be a valid email address"),
+  AdminPassword: z.string().min(1, "AdminPassword is required")
 });
 
 const parsedEnv = envSchema.safeParse({
   NODE_ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
   CLIENT_ORIGIN: process.env.CLIENT_ORIGIN,
-  MONGODB_URI: process.env.MONGODB_URI
+  MONGODB_URI: process.env.MONGODB_URI,
+  AdminEmail: process.env.AdminEmail,
+  AdminPassword: process.env.AdminPassword
 });
 
 if (!parsedEnv.success) {

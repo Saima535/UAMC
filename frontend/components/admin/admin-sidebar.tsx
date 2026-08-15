@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { clearAdminToken } from "../../lib/admin-auth";
 
 const sidebarLinks = [
   { href: "/admin", label: "Dashboard" },
@@ -37,6 +38,17 @@ export function AdminSidebar() {
             </Link>
           );
         })}
+        <button
+          type="button"
+          onClick={() => {
+            clearAdminToken();
+            window.location.href = "/admin/login";
+          }}
+          className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-white/78 transition hover:bg-white/8 hover:text-white"
+        >
+          <span>Logout</span>
+          <span className="text-base">→</span>
+        </button>
       </nav>
     </aside>
   );

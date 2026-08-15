@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getStoredAdminToken } from "../../lib/admin-auth";
 import { fetchContentStats } from "../../lib/content-api";
 
 type Stats = {
@@ -17,7 +18,7 @@ export function AdminSummary() {
   useEffect(() => {
     let active = true;
 
-    fetchContentStats()
+    fetchContentStats(false, getStoredAdminToken())
       .then((result) => {
         if (active) {
           setStats(result);
