@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FacilitiesPublicationList } from "../../../components/content/facilities-publication-list";
 import { LandingPageHeader } from "../../../components/landing-page-header";
 import { SiteFooter } from "../../../components/site-footer";
 
@@ -16,13 +17,6 @@ const facilityLinks = [
   { href: "/facilities/cafeteria", label: "Cafeteria" }
 ];
 
-const publications = Array.from({ length: 5 }, () => ({
-  day: "12",
-  month: "Mar 25",
-  time: "3.40 PM",
-  title: '"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st Phase Training"'
-}));
-
 function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
@@ -34,15 +28,6 @@ function MedicalPattern() {
         className="object-cover"
       />
     </div>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" className="h-4 w-4" aria-hidden="true">
-      <circle cx="12" cy="12" r="8.2" />
-      <path d="M12 7.8v4.8l3.1 1.7" />
-    </svg>
   );
 }
 
@@ -124,28 +109,7 @@ export default function FacilitiesPublicationPage() {
                 </div>
               </div>
 
-              <div className="mt-6 space-y-3">
-                {publications.map((item, index) => (
-                  <article key={`${item.title}-${index}`} className="bg-[#eaebf8] px-6 py-6">
-                    <div className="grid gap-6 md:grid-cols-[84px_1fr]">
-                      <div className="text-center">
-                        <div className="text-[50px] font-bold leading-none text-[#333]">{item.day}</div>
-                        <div className="mt-3 inline-flex min-h-[54px] min-w-[90px] items-center justify-center bg-[#0c9a45] px-3 text-[16px] font-bold text-white">
-                          {item.month}
-                        </div>
-                      </div>
-
-                      <div className="pt-1">
-                        <h3 className="text-[18px] font-medium leading-[1.5] text-[#3e3e3e]">{item.title}</h3>
-                        <div className="mt-6 flex items-center gap-3 text-[15px] font-semibold text-[#545454]">
-                          <ClockIcon />
-                          <span>{item.time}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
+              <FacilitiesPublicationList />
             </div>
           </div>
         </section>

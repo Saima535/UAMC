@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { NoticeMediaUpdates } from "../../components/content/notice-media-updates";
 import { LandingPageHeader } from "../../components/landing-page-header";
 import { SiteFooter } from "../../components/site-footer";
 
@@ -22,21 +23,6 @@ const latestNews = [
     image: "/images/alumni.jpg",
     category: "Research"
   }
-];
-
-const noticeItems = [
-  "Application for Admission 2025 is now open",
-  "Schedule for Semester Final Examination released",
-  "International Medical Education Seminar registration",
-  "Faculty Development Program for academic staff",
-  "Public health awareness drive on campus this month"
-];
-
-const publicationItems = [
-  "Journal of UAMC Medicine, Volume 06, Issue 02",
-  "Research bulletin on clinical education practices",
-  "Student innovation projects showcase report",
-  "Annual institutional publication overview 2024"
 ];
 
 const alumniEvents = [
@@ -139,47 +125,7 @@ export default function NoticeMediaPage() {
             </div>
           </div>
 
-          <div className="space-y-8">
-            <div className="rounded-[18px] bg-[#eaf1eb] p-5 shadow-[0_10px_30px_rgba(17,38,28,0.04)] ring-1 ring-[#d9e6dc] sm:p-6">
-              <div className="mb-5 flex items-center justify-between gap-4">
-                <h2 className="text-2xl font-semibold text-[#1b1b1b]">Notice Board</h2>
-                <button type="button" className="text-sm font-medium text-[#1a7d4f] hover:text-[#0f5d36]">
-                  View all &gt;
-                </button>
-              </div>
-
-              <div className="space-y-3">
-                {noticeItems.map((item, index) => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl bg-white px-3 py-3 ring-1 ring-[#e2ebdf]">
-                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#dff0e3] text-sm font-bold text-[#1a7d4f]">
-                      {index + 1}
-                    </div>
-                    <p className="text-[0.96rem] leading-6 text-[#2d4339]">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[18px] bg-white p-5 shadow-[0_10px_30px_rgba(17,38,28,0.04)] ring-1 ring-[#e2ebdf] sm:p-6">
-              <div className="mb-5 flex items-center justify-between gap-4">
-                <h2 className="text-2xl font-semibold text-[#1b1b1b]">Publication</h2>
-                <button type="button" className="text-sm font-medium text-[#1a7d4f] hover:text-[#0f5d36]">
-                  View all &gt;
-                </button>
-              </div>
-
-              <div className="space-y-3">
-                {publicationItems.map((item, index) => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl bg-[#f7faf7] px-3 py-3 ring-1 ring-[#e7efe8]">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[#e8f3ea] text-xs font-bold text-[#1a7d4f]">
-                      {index + 1}
-                    </div>
-                    <p className="text-[0.96rem] leading-6 text-[#2d4339]">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <NoticeMediaUpdates />
         </section>
 
         <section className="mt-12 rounded-[20px] bg-white p-4 shadow-[0_10px_30px_rgba(17,38,28,0.04)] ring-1 ring-[#e2ebdf] sm:p-6 lg:p-8">

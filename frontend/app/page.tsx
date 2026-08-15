@@ -1,16 +1,7 @@
 import Image from "next/image";
+import { HomeUpdatesPanels } from "../components/content/home-updates-panels";
 import { LandingPageHeader } from "../components/landing-page-header";
 import { SiteFooter } from "../components/site-footer";
-
-const notices = [
-  { day: "12", month: "Mar", title: "FGC's e-Logbook: Modernizing the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" },
-  { day: "12", month: "Mar", title: "FGC's e-Logbook: Monitoring the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" },
-  { day: "12", month: "Mar", title: "FGC's e-Logbook: Monitoring the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" },
-  { day: "12", month: "Mar", title: "FGC's e-Logbook: Monitoring the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" },
-  { day: "12", month: "Mar", title: "FGC's e-Logbook: Monitoring the Monitoring of FGC's Full-Time Faculty", time: "3:00 PM" }
-];
-
-const publications = notices;
 
 const facilities = ["Laboratory", "Hospital Services", "Cafeteria", "Training", "Medical Educational Skill", "Departments", "Publications", "Seminar"];
 
@@ -139,63 +130,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-[1180px] px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div>
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-3xl font-semibold text-[#1b7e47]">Notice Board</h3>
-              <span className="text-sm text-[#7c8b7f]">View All &gt;</span>
-            </div>
-            <div className="rounded-sm bg-white p-3 shadow-[0_10px_40px_rgba(26,49,34,0.06)] ring-1 ring-[#dce6de]">
-              <div className="mb-3 flex gap-3 text-xs font-semibold">
-                <span className="border-b-2 border-[#1b7e47] px-4 py-2 text-[#1b7e47]">General Notice</span>
-                <span className="px-4 py-2 text-[#8a948b]">Admission Notice</span>
-                <span className="px-4 py-2 text-[#8a948b]">Reports</span>
-                <span className="px-4 py-2 text-[#8a948b]">Job Circular</span>
-              </div>
-              <div className="space-y-2">
-                {notices.map((item, index) => (
-                  <article key={`${item.title}-${index}`} className="grid grid-cols-[76px_1fr] items-center gap-4 bg-[#f5f6fb] px-3 py-2">
-                    <div className="w-[58px] rounded-sm bg-white text-center shadow-sm ring-1 ring-[#dce6de]">
-                      <div className="border-b border-[#dce6de] py-1 text-xl font-bold text-[#1b7e47]">{item.day}</div>
-                      <div className="py-1 text-xs font-semibold text-[#7a867c]">{item.month}</div>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-[#435445]">{item.title}</p>
-                      <p className="mt-1 text-xs text-[#8a948b]">{item.time}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-3xl font-semibold text-[#1b7e47]">Publication</h3>
-              <span className="text-sm text-[#7c8b7f]">View All &gt;</span>
-            </div>
-            <div className="rounded-sm bg-white p-3 shadow-[0_10px_40px_rgba(26,49,34,0.06)] ring-1 ring-[#dce6de]">
-              <div className="mb-3 flex gap-3 text-xs font-semibold">
-                <span className="border-b-2 border-[#1b7e47] px-4 py-2 text-[#1b7e47]">Journal</span>
-                <span className="px-4 py-2 text-[#8a948b]">Thesis</span>
-              </div>
-              <div className="space-y-2">
-                {publications.map((item, index) => (
-                  <article key={`${item.title}-${index}`} className="grid grid-cols-[76px_1fr] items-center gap-4 bg-[#f5f6fb] px-3 py-2">
-                    <div className="w-[58px] rounded-sm bg-white text-center shadow-sm ring-1 ring-[#dce6de]">
-                      <div className="border-b border-[#dce6de] py-1 text-xl font-bold text-[#1b7e47]">{item.day}</div>
-                      <div className="py-1 text-xs font-semibold text-[#7a867c]">{item.month}</div>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-[#435445]">{item.title}</p>
-                      <p className="mt-1 text-xs text-[#8a948b]">{item.time}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <HomeUpdatesPanels />
       </section>
 
       <section className="mx-auto max-w-[1180px] px-4 py-10 sm:px-6 lg:px-8">

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NavbarDropdownMenu } from "./navbar-dropdown-menu";
 
 const utilityLinks = [
@@ -11,7 +14,7 @@ const utilityLinks = [
 ];
 
 const primaryLinks = [
-  { href: "/", label: "HOME", active: true },
+  { href: "/", label: "HOME" },
   { href: "/notice-media", label: "NOTICE & MEDIA" },
   { href: "/doctors", label: "CAREER" }
 ];
@@ -133,6 +136,12 @@ function MenuIcon() {
 }
 
 export function LandingPageHeader() {
+  const pathname = usePathname();
+  const isHomeActive = pathname === "/";
+  const isAboutActive = pathname.startsWith("/about-uamc");
+  const isFacilitiesActive = pathname.startsWith("/facilities");
+  const isAdmissionActive = pathname.startsWith("/admission");
+
   return (
     <header className="sticky top-0 z-40 bg-white" suppressHydrationWarning>
       <div className="border-b border-[#e6e6e6]">
@@ -200,21 +209,21 @@ export function LandingPageHeader() {
                   key={item.label}
                   href={item.href}
                   className={`inline-flex items-center gap-2 pb-[10px] transition hover:text-[#14843f] ${
-                    item.active ? "border-b-2 border-[#14843f] text-[#14843f]" : "border-b-2 border-transparent"
+                    isHomeActive ? "border-b-2 border-[#14843f] text-[#14843f]" : "border-b-2 border-transparent"
                   }`}
                 >
                   <span>{item.label}</span>
                 </Link>
               ))}
-              <NavbarDropdownMenu label="ABOUT UAMC" href="/about-uamc/overview" items={aboutDropdownItems} />
-              <NavbarDropdownMenu label="FACILITIES" href="/facilities/hospital-service" items={facilitiesDropdownItems} />
-              <NavbarDropdownMenu label="ADMISSION" href="/admission" items={admissionDropdownItems} active />
+              <NavbarDropdownMenu label="ABOUT UAMC" href="/about-uamc/overview" items={aboutDropdownItems} active={isAboutActive} />
+              <NavbarDropdownMenu label="FACILITIES" href="/facilities/hospital-service" items={facilitiesDropdownItems} active={isFacilitiesActive} />
+              <NavbarDropdownMenu label="ADMISSION" href="/admission" items={admissionDropdownItems} active={isAdmissionActive} />
               {primaryLinks.slice(1).map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   className={`inline-flex items-center gap-2 pb-[10px] transition hover:text-[#14843f] ${
-                    item.active ? "border-b-2 border-[#14843f] text-[#14843f]" : "border-b-2 border-transparent"
+                    pathname === item.href ? "border-b-2 border-[#14843f] text-[#14843f]" : "border-b-2 border-transparent"
                   }`}
                 >
                   <span>{item.label}</span>
