@@ -175,7 +175,7 @@ export default function HomePage() {
               About <span className="text-[#e0b03a]">UAMC</span>
             </h2>
             <p className="mt-6 text-[15px] leading-8 text-[#6f6f6f]">
-              Uttar Adhunik Medical College (UAMC) is a prestigious medical institution located in Uttara Model Town, Dhaka, Bangladesh. Established in 2003.
+              Uttara Adhunik Medical College (UAMC) is a prestigious medical institution located in Uttara Model Town, Dhaka, Bangladesh. Established in 2003.
             </p>
             <p className="mt-4 text-[15px] leading-8 text-[#6f6f6f]">
               UAMC offers a Bachelor of Medicine and Bachelor of Surgery (MBBS) program, designed to equip students with the knowledge, skills, and hands-on clinical training needed to excel in the medical profession.
@@ -301,7 +301,7 @@ export default function HomePage() {
               <span className="text-[#f2c33b]">UAMC</span> Admission
             </h3>
             <p className="mx-auto mt-5 max-w-[980px] text-[13px] leading-5 text-white/92 sm:text-[14px] sm:leading-6">
-              Uttar Adhunik Medical College (UAMC) was established in 2003 with a vision to provide quality medical education and healthcare services. Founded through the dedicated efforts of medical professionals and social leaders, UAMC is committed to training future doctors while ensuring affordable healthcare for the community.
+              Uttara Adhunik Medical College (UAMC) was established in 2003 with a vision to provide quality medical education and healthcare services. Founded through the dedicated efforts of medical professionals and social leaders, UAMC is committed to training future doctors while ensuring affordable healthcare for the community.
             </p>
             <button className="mt-7 inline-flex items-center gap-2 rounded-sm bg-[#17a44f] px-10 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.14)]">
               Learn More
@@ -385,7 +385,7 @@ export default function HomePage() {
               </div>
               <p className="mt-2 text-[18px] font-medium text-[#333]">Ensuring Quality Healthcare &amp; Medical Education</p>
               <p className="mt-4 max-w-[560px] text-[12px] leading-6 text-[#6b6b6b]">
-                Bangladesh faces significant challenges in delivering healthcare nationwide. To support government efforts, Uttar Adhunik Medical College Hospital (UAMCH) has been providing comprehensive health services since 2003, evolving into a tertiary-level multidisciplinary hospital.
+                Bangladesh faces significant challenges in delivering healthcare nationwide. To support government efforts, Uttara Adhunik Medical College Hospital (UAMCH) has been providing comprehensive health services since 2003, evolving into a tertiary-level multidisciplinary hospital.
               </p>
               <button className="mt-8 inline-flex items-center gap-2 rounded-sm bg-[#0f8f47] px-8 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.10)]">
                 Read More

@@ -186,8 +186,9 @@ export function LandingPageHeader() {
                 <Image src="/images/logo.png" alt="UAMC logo" fill sizes="58px" className="object-contain" priority />
               </div>
               <div>
-                <p className="font-sans text-[19px] font-extrabold leading-none text-[#121212] sm:text-[22px]">Uttara Adhunik</p>
-                <p className="mt-1 text-[14px] leading-none text-[#2f2f2f] sm:text-[15px]">Medical College (UAMC)</p>
+                <p className="font-sans text-[17px] font-extrabold leading-tight text-[#121212] sm:text-[20px]">
+                  Uttara Adhunik Medical College
+                </p>
               </div>
             </Link>
 

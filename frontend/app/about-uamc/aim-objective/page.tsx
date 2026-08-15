@@ -212,7 +212,7 @@ export default function AboutUamcAimObjectivePage() {
                 <span className="text-[#efbe2d]">UAMC</span> Admission
               </h3>
               <p className="mx-auto mt-5 max-w-[1000px] text-[13px] leading-6 text-white/92">
-                Uttar Adhunik Medical College (UAMC) was established in 2003 with a vision to provide quality medical
+                Uttara Adhunik Medical College (UAMC) was established in 2003 with a vision to provide quality medical
                 education and healthcare services. Founded through the dedicated efforts of medical professionals and
                 social leaders, UAMC is committed to training future doctors while ensuring affordable healthcare for the
                 community.
@@ -248,8 +248,7 @@ export default function AboutUamcAimObjectivePage() {
                   <Image src="/images/logo.png" alt="UAMC logo" fill sizes="58px" className="object-contain" />
                 </div>
                 <div>
-                  <p className="font-display text-[2rem] leading-none text-white">Uttara Adhunik</p>
-                  <p className="mt-1 text-[15px] text-white/92">Medical College (UAMC)</p>
+                  <p className="font-display text-[1.7rem] leading-tight text-white">Uttara Adhunik Medical College</p>
                 </div>
               </div>
               <p className="mt-8 text-[15px] leading-9 text-white/48">

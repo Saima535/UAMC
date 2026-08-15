@@ -158,8 +158,7 @@ export default function AboutUamcVisionMissionPage() {
                   <Image src="/images/logo.png" alt="UAMC logo" fill sizes="58px" className="object-contain" />
                 </div>
                 <div>
-                  <p className="font-display text-[2rem] leading-none text-white">Uttara Adhunik</p>
-                  <p className="mt-1 text-[15px] text-white/92">Medical College (UAMC)</p>
+                  <p className="font-display text-[1.7rem] leading-tight text-white">Uttara Adhunik Medical College</p>
                 </div>
               </div>
               <p className="mt-8 text-[15px] leading-9 text-white/48">

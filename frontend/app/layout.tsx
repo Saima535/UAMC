@@ -14,8 +14,26 @@ const displayFont = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "UAMC | United Advanced Medical College Hospital",
-  description: "Landing page recreation for UAMC built with Next.js and React."
+  title: {
+    default: "Uttara Adhunik Medical College",
+    template: "%s | Uttara Adhunik Medical College"
+  },
+  applicationName: "Uttara Adhunik Medical College",
+  description:
+    "Official website of Uttara Adhunik Medical College, featuring admissions, facilities, academic information, notices, and institutional updates.",
+  openGraph: {
+    title: "Uttara Adhunik Medical College",
+    description:
+      "Official website of Uttara Adhunik Medical College, featuring admissions, facilities, academic information, notices, and institutional updates.",
+    siteName: "Uttara Adhunik Medical College",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uttara Adhunik Medical College",
+    description:
+      "Official website of Uttara Adhunik Medical College, featuring admissions, facilities, academic information, notices, and institutional updates."
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
