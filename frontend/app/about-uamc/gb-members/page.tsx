@@ -1,16 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LandingPageHeader } from "../../../components/landing-page-header";
 import { SiteFooter } from "../../../components/site-footer";
 
 const tabs = [
-  "Overview",
-  "History of UAMC",
-  "Vision & Mission",
-  "Aim & Objective",
-  "Organizational Structure",
-  "Founder Members",
-  "EC Members",
-  "GB Members"
+  { label: "Overview", href: "/about-uamc/overview" },
+  { label: "History of UAMC", href: "/about-uamc/history" },
+  { label: "Vision & Mission", href: "/about-uamc/vision-mission" },
+  { label: "Aim & Objective", href: "/about-uamc/aim-objective" },
+  { label: "Organizational Structure", href: "/about-uamc/organizational-structure" },
+  { label: "Founder Members", href: "/about-uamc/founder-members" },
+  { label: "EC Members", href: "/about-uamc/ec-members" },
+  { label: "GB Members", href: "/about-uamc/gb-members" }
 ];
 
 const members = [
@@ -52,19 +53,19 @@ export default function AboutUamcGbMembersPage() {
         <div className="mt-0 border border-[#d9e3d9] border-t-0 bg-[#eef3ee] px-2 py-3 sm:px-4">
           <nav className="flex flex-wrap items-center gap-2 sm:gap-3">
             {tabs.map((tab) => {
-              const isActive = tab === "GB Members";
+              const isActive = tab.href === "/about-uamc/gb-members";
               return (
-                <a
-                  key={tab}
-                  href="#"
+                <Link
+                  key={tab.href}
+                  href={tab.href}
                   className={`inline-flex items-center justify-center rounded-md border px-3 py-2.5 text-[11px] font-medium uppercase tracking-[0.04em] transition sm:px-4 ${
                     isActive
                       ? "border-[#1d4f3d] bg-[#1a5e46] text-white shadow-sm"
                       : "border-[#d7ddd5] bg-[#f5f8f5] text-[#3c4d42] hover:border-[#bdd5c7] hover:text-[#1b7d4d]"
                   }`}
                 >
-                  {tab}
-                </a>
+                  {tab.label}
+                </Link>
               );
             })}
           </nav>

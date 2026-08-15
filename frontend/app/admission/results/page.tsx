@@ -113,14 +113,8 @@ export default function AdmissionResultsPage() {
               </div>
 
               <div className="hidden shrink-0 lg:block">
-                <div className="relative h-[150px] w-[150px] overflow-hidden rounded-full border-[10px] border-[#d3e5d6] bg-[#dff3e7] shadow-[0_16px_30px_rgba(19,46,31,0.12)]">
-                  <Image
-                    src="/Admission Result/camp2.jpg"
-                    alt="UAMC badge"
-                    fill
-                    sizes="150px"
-                    className="object-cover"
-                  />
+                <div className="relative h-[150px] w-[150px]">
+                  <Image src="/images/logo.png" alt="UAMC logo" fill sizes="150px" className="object-contain" />
                 </div>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -64,9 +65,17 @@ export function AdmissionPageShell({
           <section className="space-y-8">
             <div className="overflow-hidden rounded-[32px] border border-[#d9e4dc] bg-white shadow-sm">
               <div className="bg-[linear-gradient(135deg,#eef5ef_0%,#fbfcfa_55%,#e2efe6_100%)] px-8 py-10 sm:px-10 sm:py-12">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#14843f]">{eyebrow}</p>
-                <h1 className="mt-4 text-[clamp(2.2rem,4vw,4.1rem)] font-semibold tracking-tight text-[#16211a]">{title}</h1>
-                <p className="mt-6 max-w-3xl text-base leading-8 text-[#5d6d63]">{description}</p>
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#14843f]">{eyebrow}</p>
+                    <h1 className="mt-4 text-[clamp(2.2rem,4vw,4.1rem)] font-semibold tracking-tight text-[#16211a]">{title}</h1>
+                    <p className="mt-6 max-w-3xl text-base leading-8 text-[#5d6d63]">{description}</p>
+                  </div>
+
+                  <div className="relative hidden h-[128px] w-[128px] shrink-0 lg:block">
+                    <Image src="/images/logo.png" alt="UAMC logo" fill sizes="128px" className="object-contain" />
+                  </div>
+                </div>
               </div>
 
               <div className="grid gap-4 border-t border-[#d9e4dc] px-8 py-8 sm:grid-cols-3 sm:px-10">

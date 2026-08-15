@@ -65,12 +65,8 @@ export default function AdmissionPapersPage() {
               </h1>
 
               <div className="hidden items-center justify-center lg:flex">
-                <div className="relative h-[128px] w-[128px] rounded-full border-[10px] border-[#dfeae0] bg-[#cdf2d5] shadow-[0_12px_24px_rgba(17,36,25,0.12)]">
-                  <div className="absolute inset-[18px] rounded-full border-[5px] border-[#2e7d4b] bg-[#edf5ee]" />
-                  <div className="absolute inset-[32px] rounded-full border-[6px] border-[#204a33] bg-[#d4ead8]" />
-                  <div className="absolute inset-0 flex items-center justify-center text-[10px] font-black uppercase tracking-[0.2em] text-[#1f5f39]">
-                    UAMC
-                  </div>
+                <div className="relative h-[128px] w-[128px]">
+                  <Image src="/images/logo.png" alt="UAMC logo" fill sizes="128px" className="object-contain" />
                 </div>
               </div>
             </div>
