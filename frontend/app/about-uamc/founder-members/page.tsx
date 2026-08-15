@@ -70,10 +70,8 @@ export default function FounderMembersPage() {
         <section className="relative overflow-hidden border border-[#d9e3d9] bg-[#dfeae0]">
           <div className="absolute inset-y-0 left-0 w-[18%] bg-gradient-to-r from-[#dfeae0] to-transparent" />
           <div className="absolute inset-y-0 right-[5%] hidden w-[260px] items-center justify-center lg:flex">
-            <div className="relative h-[160px] w-[160px] rounded-full border-[10px] border-[#deefde] bg-[#d3ead9] shadow-[0_4px_20px_rgba(27,62,42,0.15)]">
-              <div className="absolute inset-5 rounded-full border-[6px] border-[#5a7a62] bg-[#dfeae0]" />
-              <div className="absolute inset-[26px] rounded-full bg-[#e7f0e8]" />
-              <div className="absolute inset-[40px] rounded-full border-[8px] border-[#0b5d2f] bg-[#d8efdd]" />
+            <div className="relative h-[160px] w-[160px]">
+              <Image src="/images/logo.png" alt="UAMC seal" fill sizes="160px" className="object-contain" />
             </div>
           </div>
 
