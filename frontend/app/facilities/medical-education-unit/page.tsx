@@ -56,8 +56,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Medical Education Unit/hero-strip-placeholder.svg"
-        alt="Medical Education Unit decorative strip placeholder"
+        src="/Medical Education Unit/camp1.jpg"
+        alt="Medical Education Unit decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -168,8 +168,8 @@ export default function FacilitiesMedicalEducationUnitPage() {
               <div className="mt-14">
                 <div className="relative aspect-[2.12/0.79] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Medical Education Unit/main-meu-placeholder.svg"
-                    alt="Medical Education Unit main image placeholder"
+                    src="/Medical Education Unit/dept1.jpg"
+                    alt="Medical Education Unit"
                     fill
                     sizes="100vw"
                     className="object-cover"

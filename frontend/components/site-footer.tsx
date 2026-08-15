@@ -133,11 +133,14 @@ export function SiteFooter() {
             <div className="mt-10 space-y-7">
               {recentPosts.map((post, index) => (
                 <article key={post.title} className="grid grid-cols-[84px_1fr] gap-5">
-                  <div className="flex aspect-square items-center justify-center border border-white/10 bg-white/[0.03] text-center text-[11px] text-white/28">
-                    {/* Footer post images will be added manually later from public/footerImage. */}
-                    Footer
-                    <br />
-                    Image {index + 1}
+                  <div className="relative aspect-square overflow-hidden border border-white/10 bg-white/[0.03]">
+                    <Image
+                      src="/footerImage/umac2.jpg"
+                      alt={`Recent post ${index + 1}`}
+                      fill
+                      sizes="84px"
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <div className="flex items-center gap-3 text-[14px] text-white/36">

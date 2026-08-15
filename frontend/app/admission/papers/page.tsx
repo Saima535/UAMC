@@ -101,7 +101,7 @@ export default function AdmissionPapersPage() {
 
           <div className="mt-6 overflow-hidden rounded-[12px] border border-[#dfeae0] bg-[#edf5ef]">
             <div className="relative h-[120px] w-full sm:h-[150px]">
-              <Image src="/Admission Papers/placeholder-hero.svg" alt="Admission banner placeholder" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/campus1.jpg" alt="Admission banner" fill sizes="100vw" className="object-cover" />
             </div>
           </div>
 

@@ -53,8 +53,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Cafeteria/hero-strip-placeholder.svg"
-        alt="Cafeteria decorative strip placeholder"
+        src="/Cafeteria/umac2.jpg"
+        alt="Cafeteria decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -153,8 +153,8 @@ export default function FacilitiesCafeteriaPage() {
               <div className="mt-14 grid gap-6 md:grid-cols-2">
                 <div className="relative aspect-[1.08/0.72] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Cafeteria/dining-hall-left-placeholder.svg"
-                    alt="Cafeteria left image placeholder"
+                    src="/Cafeteria/umac2.jpg"
+                    alt="Cafeteria dining hall"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
@@ -162,8 +162,8 @@ export default function FacilitiesCafeteriaPage() {
                 </div>
                 <div className="relative aspect-[1.08/0.72] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Cafeteria/dining-hall-right-placeholder.svg"
-                    alt="Cafeteria right image placeholder"
+                    src="/Cafeteria/umac2.jpg"
+                    alt="Cafeteria seating area"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"

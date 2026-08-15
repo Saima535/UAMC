@@ -17,17 +17,17 @@ const members = [
   {
     name: "Engr. Kh. Meshbuddin Ahmed",
     role: "Co-Chairman, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Maj. Gen. Md. Rafiqul Islam (Retd.)",
     role: "Honorary Secretary, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Engr. G.M. Majid Abedin Bhuiya",
     role: "Honorary Treasurer, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   }
 ];
 

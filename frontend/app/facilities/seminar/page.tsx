@@ -65,8 +65,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Seminar/hero-strip-placeholder.svg"
-        alt="Seminar decorative strip placeholder"
+        src="/Seminar/dept1.jpg"
+        alt="Seminar decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -177,8 +177,8 @@ export default function FacilitiesSeminarPage() {
               <div className="mt-14 grid gap-6 md:grid-cols-2">
                 <div className="relative aspect-[1.15/0.74] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Seminar/seminar-left-placeholder.svg"
-                    alt="Seminar left image placeholder"
+                    src="/Seminar/dept1.jpg"
+                    alt="Seminar presentation"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
@@ -186,8 +186,8 @@ export default function FacilitiesSeminarPage() {
                 </div>
                 <div className="relative aspect-[1.15/0.74] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Seminar/seminar-right-placeholder.svg"
-                    alt="Seminar right image placeholder"
+                    src="/Seminar/dept1.jpg"
+                    alt="Seminar collaboration"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"

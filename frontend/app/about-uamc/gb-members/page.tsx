@@ -17,7 +17,7 @@ const members = [
   {
     name: "Professor Dr. Farhad Haleem",
     title: "Chairman, Governing Body, UAMC",
-    image: "/GB Members/placeholder-member.svg"
+    image: "/GB Members/download.jpg"
   }
 ];
 

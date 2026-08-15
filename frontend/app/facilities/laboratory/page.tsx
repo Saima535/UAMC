@@ -53,8 +53,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Laboratory/hero-strip-placeholder.svg"
-        alt="Laboratory decorative strip placeholder"
+        src="/Laboratory/umac2.jpg"
+        alt="Laboratory decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -153,8 +153,8 @@ export default function FacilitiesLaboratoryPage() {
               <div className="mt-14">
                 <div className="relative aspect-[2.18/0.7] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Laboratory/main-lab-placeholder.svg"
-                    alt="Laboratory main image placeholder"
+                    src="/Laboratory/dept1.jpg"
+                    alt="Laboratory services"
                     fill
                     sizes="100vw"
                     className="object-cover"

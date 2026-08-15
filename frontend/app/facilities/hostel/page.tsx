@@ -54,8 +54,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Hostel/hero-strip-placeholder.svg"
-        alt="Hostel decorative strip placeholder"
+        src="/Hostel/umac2.jpg"
+        alt="Hostel decorative strip"
         fill
         sizes="100vw"
         className="object-cover"

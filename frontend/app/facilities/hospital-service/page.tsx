@@ -82,8 +82,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Hospital Service/hero-strip-placeholder.svg"
-        alt="Hospital Service decorative strip placeholder"
+        src="/Hospital Service/umac2.jpg"
+        alt="Hospital Service decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -306,8 +306,8 @@ export default function FacilitiesHospitalServicePage() {
               <div className="mt-12">
                 <div className="relative aspect-[2.05/0.78] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Hospital Service/about-hospital-placeholder.svg"
-                    alt="Hospital Service main image placeholder"
+                    src="/Hospital Service/umac2.jpg"
+                    alt="Hospital Service main building"
                     fill
                     sizes="100vw"
                     className="object-cover"
@@ -368,8 +368,8 @@ export default function FacilitiesHospitalServicePage() {
 
                   <div className="relative min-h-[280px] overflow-hidden bg-[#dce9dd]">
                     <Image
-                      src="/Hospital Service/icu-team-placeholder.svg"
-                      alt="ICU team placeholder"
+                      src="/Hospital Service/umac2.jpg"
+                      alt="ICU team"
                       fill
                       sizes="(max-width: 1024px) 100vw, 35vw"
                       className="object-cover"

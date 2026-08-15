@@ -52,8 +52,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Departments/hero-strip-placeholder.svg"
-        alt="Departments decorative strip placeholder"
+        src="/Departments/camp2.jpg"
+        alt="Departments decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -144,8 +144,8 @@ export default function FacilitiesDepartmentsPage() {
                   >
                     <div className="relative aspect-[1.12/0.78] overflow-hidden bg-[#dce9dd] p-2">
                       <Image
-                        src="/Departments/department-card-placeholder.svg"
-                        alt={`${department.title} image placeholder`}
+                        src="/Departments/camp2.jpg"
+                        alt={department.title}
                         fill
                         sizes="(max-width: 1280px) 50vw, 25vw"
                         className="object-cover"

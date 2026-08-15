@@ -55,8 +55,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Training/hero-strip-placeholder.svg"
-        alt="Training decorative strip placeholder"
+        src="/Training/camp2.jpg"
+        alt="Training decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -156,8 +156,8 @@ export default function FacilitiesTrainingPage() {
               <div className="mt-14">
                 <div className="relative aspect-[2.08/0.78] overflow-hidden border-[6px] border-white bg-[#ddebe0] shadow-[0_0_0_1px_rgba(15,15,15,0.06)]">
                   <Image
-                    src="/Training/main-training-placeholder.svg"
-                    alt="Training main image placeholder"
+                    src="/Training/dept1.jpg"
+                    alt="Training facilities"
                     fill
                     sizes="100vw"
                     className="object-cover"

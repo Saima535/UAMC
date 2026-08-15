@@ -17,47 +17,47 @@ const members = [
   {
     name: "Late Prof. Mohammad Yousuf Ali",
     role: "Ex-Chairman, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Mr. M. M. Zaman",
     role: "Ex-Co-Chairman, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Prof. Abu Ahmed",
     role: "Ex-Co-Chairman, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Prof. C. H. Kabir",
     role: "Ex-Hony. Secretary, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Prof. K.A. Qamruddin",
     role: "Ex-Hony. Treasurer, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Prof. M.I. Chowdhury",
     role: "Ex-Member, EC, BMSRI",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Prof. Shamsul Hug",
     role: "Ex-Vice Chancellor, Dhaka University",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Mr. Abdul Karim",
     role: "Ex-Managing Director (CSL)",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   },
   {
     name: "Late Mr. Sirajul Islam",
     role: "Ex-Managing Director (SIT)",
-    image: "/Founder Members/placeholder-member.svg"
+    image: "/Founder Members/download (1).jpg"
   }
 ];
 

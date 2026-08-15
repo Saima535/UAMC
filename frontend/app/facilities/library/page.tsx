@@ -77,8 +77,8 @@ function MedicalPattern() {
   return (
     <div className="absolute inset-x-0 top-0 h-[104px] overflow-hidden">
       <Image
-        src="/Library/hero-strip-placeholder.svg"
-        alt="Library decorative strip placeholder"
+        src="/Library/camp1.jpg"
+        alt="Library decorative strip"
         fill
         sizes="100vw"
         className="object-cover"
@@ -205,8 +205,8 @@ export default function FacilitiesLibraryPage() {
               <div className="mt-12">
                 <div className="relative aspect-[2.08/0.78] overflow-hidden bg-[#ddebe0]">
                   <Image
-                    src="/Library/main-library-placeholder.svg"
-                    alt="Library main image placeholder"
+                    src="/Library/camp1.jpg"
+                    alt="Library main hall"
                     fill
                     sizes="100vw"
                     className="object-cover"

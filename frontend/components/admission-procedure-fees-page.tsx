@@ -172,7 +172,7 @@ export function AdmissionProcedureFeesPage() {
             <div className="grid min-h-[290px] gap-0 lg:grid-cols-[1.55fr_0.45fr]">
               <div className="relative overflow-hidden bg-[#e7f0e9]">
                 <Image
-                  src="/Admission%20Rules/placeholder-medical.svg"
+                  src="/Admission Rules/camp2.jpg"
                   alt="Admission illustration"
                   fill
                   sizes="(max-width: 1024px) 100vw, 65vw"

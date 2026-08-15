@@ -84,7 +84,7 @@ export default function AdmissionRulesPage() {
 
               <div className="overflow-hidden rounded-[14px] border border-[#dfeae0] bg-[#ebf4ed]">
                 <div className="relative h-[260px] w-full">
-                  <Image src="/Admission Rules/placeholder-medical.svg" alt="Admission rules illustration" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+                  <Image src="/Admission Rules/camp2.jpg" alt="Admission rules illustration" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
                 </div>
                 <div className="p-4">
                   <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#1a7d4f]">Official Policy</p>

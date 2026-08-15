@@ -48,10 +48,10 @@ function ShareIcon() {
 function handleDownload(title: string) {
   if (typeof window === "undefined") return;
 
-  const href = "/Admission Result/placeholder-document.svg";
+  const href = "/Admission Result/camp2.jpg";
   const link = document.createElement("a");
   link.href = href;
-  link.download = `${title || "uamc-admission-result"}.svg`;
+  link.download = `${title || "uamc-admission-result"}.jpg`;
   link.rel = "noopener noreferrer";
   document.body.appendChild(link);
   link.click();
@@ -115,8 +115,8 @@ export default function AdmissionResultsPage() {
               <div className="hidden shrink-0 lg:block">
                 <div className="relative h-[150px] w-[150px] overflow-hidden rounded-full border-[10px] border-[#d3e5d6] bg-[#dff3e7] shadow-[0_16px_30px_rgba(19,46,31,0.12)]">
                   <Image
-                    src="/Admission Result/placeholder-badge.svg"
-                    alt="UAMC badge placeholder"
+                    src="/Admission Result/camp2.jpg"
+                    alt="UAMC badge"
                     fill
                     sizes="150px"
                     className="object-cover"
