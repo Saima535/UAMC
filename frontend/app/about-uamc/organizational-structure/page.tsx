@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "../../../components/site-footer";
 import { SiteHeader } from "../../../components/site-header";
@@ -15,26 +16,15 @@ const aboutLinks = [
 
 function PlaceholderImage({
   label,
-  filename,
   className
 }: {
   label: string;
-  filename: string;
   className?: string;
 }) {
   return (
-    <div
-      className={`relative overflow-hidden border border-dashed border-[#9ac7ac] bg-[linear-gradient(135deg,#edf5ef_0%,#dfeee3_50%,#cfe3d5_100%)] ${className ?? ""}`}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(17,152,74,0.18),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(242,195,58,0.12),transparent_20%),linear-gradient(135deg,rgba(255,255,255,0.55),rgba(255,255,255,0.12))]" />
+    <div className={`relative overflow-hidden bg-[#dfeee3] ${className ?? ""}`}>
+      <Image src="/Organizational Structure/camp3.jpg" alt={label} fill sizes="100vw" className="object-cover" />
       <div className="absolute inset-0 border border-white/40" />
-      <div className="relative flex h-full w-full flex-col items-center justify-center px-4 text-center">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#157a43]">Image Slot</p>
-        <p className="mt-3 text-[15px] font-semibold text-[#355344]">{label}</p>
-        <p className="mt-2 max-w-[220px] text-[11px] leading-5 text-[#5f7466]">
-          Add file to `/public/Organizational Structure/{filename}`
-        </p>
-      </div>
     </div>
   );
 }
@@ -75,7 +65,6 @@ export default function AboutUamcOrganizationalStructurePage() {
                 <div className="relative hidden h-[136px] w-[136px] shrink-0 lg:block">
                   <PlaceholderImage
                     label="UAMC Seal"
-                    filename="structure-seal.jpg"
                     className="h-full w-full rounded-full border-0"
                   />
                 </div>
@@ -105,7 +94,6 @@ export default function AboutUamcOrganizationalStructurePage() {
         <section className="relative overflow-hidden py-12">
           <PlaceholderImage
             label="Admission Banner Background"
-            filename="structure-admission-banner.jpg"
             className="absolute inset-0"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(14,80,35,0.82),rgba(14,80,35,0.42))]" />
@@ -148,7 +136,7 @@ export default function AboutUamcOrganizationalStructurePage() {
             <div className="max-w-[360px]">
               <div className="flex items-center gap-4">
                 <div className="relative h-[58px] w-[58px] shrink-0">
-                  <PlaceholderImage label="Logo" filename="footer-logo.jpg" className="h-full w-full border-0" />
+                  <PlaceholderImage label="Logo" className="h-full w-full border-0" />
                 </div>
                 <div>
                   <p className="font-display text-[2rem] leading-none text-white">Uttara Adhunik</p>
@@ -197,7 +185,6 @@ export default function AboutUamcOrganizationalStructurePage() {
                     <div className="relative h-[84px] overflow-hidden border border-white/10 bg-white/[0.03]">
                       <PlaceholderImage
                         label={`Post ${index + 1}`}
-                        filename={`post-${index + 1}.jpg`}
                         className="h-full w-full border-0"
                       />
                     </div>

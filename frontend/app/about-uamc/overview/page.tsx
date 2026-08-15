@@ -16,24 +16,15 @@ const aboutLinks = [
 
 function OverviewImagePlaceholder({
   label,
-  filename,
   className
 }: {
   label: string;
-  filename: string;
   className?: string;
 }) {
   return (
-    <div
-      className={`relative overflow-hidden bg-[linear-gradient(135deg,#d9ece0_0%,#eef7f0_55%,#d0e4d6_100%)] ${className ?? ""}`}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(18,149,71,0.16),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.55),rgba(255,255,255,0.08))]" />
+    <div className={`relative overflow-hidden bg-[#d9ece0] ${className ?? ""}`}>
+      <Image src="/Overview/camp3.jpg" alt={label} fill sizes="100vw" className="object-cover" />
       <div className="absolute inset-0 border border-[#c9ddd0]" />
-      <div className="relative flex h-full w-full flex-col items-center justify-center px-6 text-center">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#129547]">Overview Image Slot</p>
-        <p className="mt-3 text-[18px] font-semibold text-[#395040]">{label}</p>
-        <p className="mt-2 text-[12px] text-[#6b7f70]">Add file to `/public/Overview/{filename}`</p>
-      </div>
     </div>
   );
 }
@@ -148,14 +139,14 @@ export default function AboutUamcOverviewPage() {
         <section className="mx-auto grid max-w-[1440px] gap-14 px-6 py-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
           <div className="grid gap-4 sm:grid-cols-[0.8fr_1fr]">
             <div className="relative h-[420px] overflow-hidden">
-              <OverviewImagePlaceholder label="About Left Image" filename="about-left.jpg" className="h-full" />
+              <OverviewImagePlaceholder label="About Left Image" className="h-full" />
               <div className="absolute left-1/2 top-1/2 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 p-3 shadow-[0_14px_32px_rgba(16,32,24,0.2)]">
                 <div className="relative h-full w-full">
                   <Image src="/images/logo2.jpg" alt="UAMC seal" fill sizes="150px" className="rounded-full object-cover" />
                 </div>
               </div>
             </div>
-            <OverviewImagePlaceholder label="About Right Image" filename="about-right.jpg" className="h-[420px]" />
+            <OverviewImagePlaceholder label="About Right Image" className="h-[420px]" />
           </div>
 
           <div className="max-w-[640px]">
@@ -229,10 +220,10 @@ export default function AboutUamcOverviewPage() {
 
           <div className="relative grid gap-3 sm:grid-cols-[0.75fr_1.25fr]">
             <div className="grid gap-3">
-              <OverviewImagePlaceholder label="Visiting Top Image" filename="visiting-top.jpg" className="h-[150px]" />
-              <OverviewImagePlaceholder label="Visiting Bottom Image" filename="visiting-bottom.jpg" className="h-[150px]" />
+              <OverviewImagePlaceholder label="Visiting Top Image" className="h-[150px]" />
+              <OverviewImagePlaceholder label="Visiting Bottom Image" className="h-[150px]" />
             </div>
-            <OverviewImagePlaceholder label="Visiting Main Image" filename="visiting-main.jpg" className="h-[313px]" />
+            <OverviewImagePlaceholder label="Visiting Main Image" className="h-[313px]" />
             <div className="absolute bottom-3 left-[18%] z-10 flex items-center gap-4 bg-[#7bc793] px-5 py-3 text-white shadow-[0_10px_20px_rgba(0,0,0,0.12)]">
               <div className="grid h-10 w-10 place-items-center rounded-full bg-[#24352b] text-sm font-semibold">28+</div>
               <div>
@@ -245,7 +236,7 @@ export default function AboutUamcOverviewPage() {
 
         <section className="mx-auto max-w-[1440px] px-6 py-8 lg:px-10">
           <div className="relative overflow-hidden">
-            <OverviewImagePlaceholder label="Statistics Background" filename="stats-bg.jpg" className="absolute inset-0" />
+            <OverviewImagePlaceholder label="Statistics Background" className="absolute inset-0" />
             <div className="absolute inset-0 bg-[#0f7c3f]/78" />
             <div className="relative grid gap-8 px-8 py-10 text-center text-white sm:grid-cols-3">
               <div>
@@ -278,10 +269,10 @@ export default function AboutUamcOverviewPage() {
 
         <section className="mx-auto grid max-w-[1440px] gap-12 px-6 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div className="grid gap-3 sm:grid-cols-[0.85fr_1fr]">
-            <OverviewImagePlaceholder label="Admission Left Image" filename="admission-left.jpg" className="h-[300px]" />
+            <OverviewImagePlaceholder label="Admission Left Image" className="h-[300px]" />
             <div className="grid gap-3">
-              <OverviewImagePlaceholder label="Admission Top Right" filename="admission-top-right.jpg" className="h-[144px]" />
-              <OverviewImagePlaceholder label="Admission Bottom Right" filename="admission-bottom-right.jpg" className="h-[144px]" />
+              <OverviewImagePlaceholder label="Admission Top Right" className="h-[144px]" />
+              <OverviewImagePlaceholder label="Admission Bottom Right" className="h-[144px]" />
             </div>
           </div>
 
@@ -326,8 +317,8 @@ export default function AboutUamcOverviewPage() {
           <div className="relative flex items-center justify-center">
             <div className="absolute right-0 top-[18px] h-[230px] w-[320px] bg-[#cfe4f4]" />
             <div className="relative z-10 flex items-end gap-6">
-              <OverviewImagePlaceholder label="Sustainability Main Image" filename="sustainability-main.jpg" className="h-[320px] w-[220px] shadow-[0_18px_32px_rgba(16,32,24,0.14)]" />
-              <OverviewImagePlaceholder label="Sustainability Side Image" filename="sustainability-side.jpg" className="h-[260px] w-[180px] shadow-[0_18px_32px_rgba(16,32,24,0.14)]" />
+              <OverviewImagePlaceholder label="Sustainability Main Image" className="h-[320px] w-[220px] shadow-[0_18px_32px_rgba(16,32,24,0.14)]" />
+              <OverviewImagePlaceholder label="Sustainability Side Image" className="h-[260px] w-[180px] shadow-[0_18px_32px_rgba(16,32,24,0.14)]" />
             </div>
           </div>
         </section>
@@ -365,13 +356,13 @@ export default function AboutUamcOverviewPage() {
                 </button>
               </div>
 
-              <OverviewImagePlaceholder label="Principal Image" filename="principal.jpg" className="h-[420px]" />
+              <OverviewImagePlaceholder label="Principal Image" className="h-[420px]" />
             </div>
           </div>
         </section>
 
         <section className="relative overflow-hidden">
-          <OverviewImagePlaceholder label="Admission Banner Background" filename="admission-banner.jpg" className="absolute inset-0" />
+          <OverviewImagePlaceholder label="Admission Banner Background" className="absolute inset-0" />
           <div className="absolute inset-0 bg-[#0f6a34]/80" />
           <div className="relative mx-auto max-w-[1440px] px-6 py-20 lg:px-10">
             <div className="mx-auto max-w-[1200px] bg-[rgba(8,68,33,0.46)] px-8 py-10 text-center text-white backdrop-blur-[1px]">
@@ -410,7 +401,6 @@ export default function AboutUamcOverviewPage() {
                   <div className="flex items-center gap-3">
                     <OverviewImagePlaceholder
                       label={`Feedback ${index + 1}`}
-                      filename={item.filename}
                       className="h-10 w-10 rounded-full"
                     />
                     <div>

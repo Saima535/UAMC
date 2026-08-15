@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "../../../components/site-footer";
 import { SiteHeader } from "../../../components/site-header";
@@ -29,24 +30,15 @@ const timelineBottom = [
 
 function PlaceholderImage({
   label,
-  filename,
   className
 }: {
   label: string;
-  filename: string;
   className?: string;
 }) {
   return (
-    <div
-      className={`relative overflow-hidden border border-dashed border-[#9ac7ac] bg-[linear-gradient(135deg,#edf5ef_0%,#dfeee3_50%,#cfe3d5_100%)] ${className ?? ""}`}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(17,152,74,0.18),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(242,195,58,0.12),transparent_20%),linear-gradient(135deg,rgba(255,255,255,0.55),rgba(255,255,255,0.12))]" />
+    <div className={`relative overflow-hidden bg-[#dfeee3] ${className ?? ""}`}>
+      <Image src="/History of UAMC/camp3.jpg" alt={label} fill sizes="100vw" className="object-cover" />
       <div className="absolute inset-0 border border-white/40" />
-      <div className="relative flex h-full w-full flex-col items-center justify-center px-4 text-center">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#157a43]">Image Slot</p>
-        <p className="mt-3 text-[15px] font-semibold text-[#355344]">{label}</p>
-        <p className="mt-2 max-w-[220px] text-[11px] leading-5 text-[#5f7466]">Add file to `/public/History of UAMC/{filename}`</p>
-      </div>
     </div>
   );
 }
@@ -85,7 +77,7 @@ export default function AboutUamcHistoryPage() {
                 </div>
 
                 <div className="relative hidden h-[136px] w-[136px] shrink-0 lg:block">
-                  <PlaceholderImage label="UAMC Seal" filename="history-seal.jpg" className="h-full w-full rounded-full border-0" />
+                  <PlaceholderImage label="UAMC Seal" className="h-full w-full rounded-full border-0" />
                 </div>
               </div>
             </div>
@@ -136,14 +128,14 @@ export default function AboutUamcHistoryPage() {
             </div>
 
             <div className="mt-10">
-              <PlaceholderImage label="History Featured Building Photo" filename="history-building.jpg" className="h-[300px] w-full" />
+              <PlaceholderImage label="History Featured Building Photo" className="h-[300px] w-full" />
             </div>
           </div>
         </section>
 
         <section className="relative overflow-hidden">
           <div className="relative h-[250px]">
-            <PlaceholderImage label="Hospital/Students Background" filename="history-stats-bg.jpg" className="absolute inset-0" />
+            <PlaceholderImage label="Hospital/Students Background" className="absolute inset-0" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,124,63,0.72),rgba(15,124,63,0.72))]" />
             <div className="relative mx-auto flex h-full max-w-[1440px] items-center px-6 lg:px-10">
               <div className="grid w-full grid-cols-1 gap-8 bg-[rgba(24,131,63,0.78)] px-8 py-8 text-center text-white shadow-[0_16px_40px_rgba(0,0,0,0.12)] sm:grid-cols-3">
@@ -229,7 +221,7 @@ export default function AboutUamcHistoryPage() {
         </section>
 
         <section className="relative overflow-hidden py-12">
-          <PlaceholderImage label="Admission Banner Background" filename="history-admission-banner.jpg" className="absolute inset-0" />
+          <PlaceholderImage label="Admission Banner Background" className="absolute inset-0" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(14,80,35,0.82),rgba(14,80,35,0.42))]" />
           <div className="relative mx-auto max-w-[1440px] px-6 lg:px-10">
             <div className="mx-auto max-w-[1200px] bg-[rgba(9,76,33,0.42)] px-8 py-10 text-center text-white backdrop-blur-[1px]">
@@ -270,7 +262,7 @@ export default function AboutUamcHistoryPage() {
             <div className="max-w-[360px]">
               <div className="flex items-center gap-4">
                 <div className="relative h-[58px] w-[58px] shrink-0">
-                  <PlaceholderImage label="Logo" filename="footer-logo.jpg" className="h-full w-full border-0" />
+                  <PlaceholderImage label="Logo" className="h-full w-full border-0" />
                 </div>
                 <div>
                   <p className="font-display text-[2rem] leading-none text-white">Uttara Adhunik</p>
@@ -317,7 +309,7 @@ export default function AboutUamcHistoryPage() {
                 ].map((post, index) => (
                   <article key={post.title} className="grid grid-cols-[84px_1fr] gap-5">
                     <div className="relative h-[84px] overflow-hidden border border-white/10 bg-white/[0.03]">
-                      <PlaceholderImage label={`Post ${index + 1}`} filename={`post-${index + 1}.jpg`} className="h-full w-full border-0" />
+                      <PlaceholderImage label={`Post ${index + 1}`} className="h-full w-full border-0" />
                     </div>
                     <div>
                       <p className="text-[14px] text-white/36">{post.date}</p>

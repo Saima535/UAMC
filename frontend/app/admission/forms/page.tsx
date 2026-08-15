@@ -100,7 +100,7 @@ export default function AdmissionFormsPage() {
           <div className="mb-8 overflow-hidden rounded-[8px] border border-[#dfeae0] bg-[#edf5ef]">
             <div className="relative h-[100px] w-full">
               <Image
-                src="/images/campus1.jpg"
+                src="/images/camp1.jpg"
                 alt="Admission forms banner"
                 fill
                 sizes="100vw"
