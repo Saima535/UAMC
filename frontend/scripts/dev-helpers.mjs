@@ -6,8 +6,8 @@ export const lockFilePath = path.join(rootDir, ".frontend-dev.lock");
 export const nextRuntimeEnvVar = "UAMC_NEXT_RUNTIME";
 export const distDirs = {
   development: ".next-development",
-  production: ".next-production",
-  legacy: ".next"
+  production: ".next",
+  legacy: ".next-production"
 };
 const cleanupTargets = [distDirs.legacy, distDirs.development, distDirs.production, "dev-smoke.log"];
 

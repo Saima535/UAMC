@@ -2,7 +2,8 @@ const runtimeMode = process.env.UAMC_NEXT_RUNTIME === "production" ? "production
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: runtimeMode === "production" ? ".next-production" : ".next-development",
+  // Vercel expects the default ".next" directory for production deployments.
+  distDir: runtimeMode === "production" ? ".next" : ".next-development",
   images: {
     remotePatterns: []
   }
